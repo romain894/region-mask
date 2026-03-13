@@ -1,0 +1,30 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  3D Fractional Region Mask for Aggregating Global Gridded
+  Data
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: 'Romain, François'
+    family-names: Thomas
+    email: romain.thomas@polito.it
+    affiliation: Politecnico di Torino
+    orcid: 'https://orcid.org/0009-0008-9900-1930'
+  - given-names: Giulia
+    family-names: Cigna
+    email: giulia.cigna@polito.it
+    orcid: 'https://orcid.org/0009-0008-7771-6265'
+    affiliation: Politecnico di Torino
+repository-code: 'https://github.com/romain894/region-mask'
+keywords:
+  - Fractional countries oceans mask
+  - Fractional grid masks
+  - NetCDF region masks
+  - Python
+  - Data analysis
+  - Scientific research

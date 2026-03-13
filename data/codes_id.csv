@@ -1,0 +1,291 @@
+ID,NAME,NE_NAME,NE_ID,EUROSTAT_NAME,EUROSTAT_ID,ISO3_CODE,ISO2_CODE,ISON_CODE,NUM_ID
+PF,French Polynesia,French Polynesia,1159320643.0,French Polynesia,PF,PYF,PF,258.0,1
+KI,Kiribati,Kiribati,1159320981.0,Kiribati,KI,KIR,KI,296.0,2
+AE,United Arab Emirates,United Arab Emirates,1159320329.0,United Arab Emirates,AE,ARE,AE,784.0,3
+AD,Andorra,Andorra,1159320327.0,Andorra,AD,AND,AD,20.0,4
+AO,Angola,Angola,1159320323.0,Angola,AO,AGO,AO,24.0,5
+AQ,Antarctica,Antarctica,1159320335.0,Antarctica,AQ,ATA,AQ,10.0,6
+AR,Argentina,Argentina,1159320331.0,Argentina,AR,ARG,AR,32.0,7
+AF,Afghanistan,Afghanistan,1159320319.0,Afghanistan,AF,AFG,AF,4.0,8
+AG,Antigua and Barbuda,Antigua and Barbuda,1159320345.0,Antigua and Barbuda,AG,ATG,AG,28.0,9
+AI,Anguilla,Anguilla,1159320703.0,Anguilla,AI,AIA,AI,660.0,10
+AL,Albania,Albania,1159320325.0,Albania,AL,ALB,AL,8.0,11
+AM,Armenia,Armenia,1159320333.0,Armenia,AM,ARM,AM,51.0,12
+AS,American Samoa,American Samoa,1159321357.0,American Samoa,AS,ASM,AS,16.0,13
+AT,Austria,Austria,1159320379.0,Austria,AT,AUT,AT,40.0,14
+AU,Australia,Australia,1159320355.0,Australia,AU,AUS,AU,36.0,15
+AZ,Azerbaijan,Azerbaijan,1159320381.0,Azerbaijan,AZ,AZE,AZ,31.0,16
+AW,Aruba,Aruba,1159321097.0,Aruba,AW,ABW,AW,533.0,17
+BA,Bosnia and Herzegovina,Bosnia and Herzegovina,1159320417.0,Bosnia and Herzegovina,BA,BIH,BA,70.0,18
+BE,Belgium,Belgium,1159320389.0,Belgium,BE,BEL,BE,56.0,19
+BB,Barbados,Barbados,1159320449.0,Barbados,BB,BRB,BB,52.0,20
+BD,Bangladesh,Bangladesh,1159320407.0,Bangladesh,BD,BGD,BD,50.0,21
+BF,Burkina Faso,Burkina Faso,1159320405.0,Burkina Faso,BF,BFA,BF,854.0,22
+BM,Bermuda,Bermuda,1159320705.0,Bermuda,BM,BMU,BM,60.0,23
+BN,Brunei,Brunei Darussalam,1159320451.0,Brunei,BN,BRN,BN,96.0,24
+BG,Bulgaria,Bulgaria,1159320409.0,Bulgaria,BG,BGR,BG,100.0,25
+BH,Bahrain,Bahrain,1159320413.0,Bahrain,BH,BHR,BH,48.0,26
+BI,Burundi,Burundi,1159320387.0,Burundi,BI,BDI,BI,108.0,27
+BJ,Benin,Benin,1159320399.0,Benin,BJ,BEN,BJ,204.0,28
+BL,Saint Barthélemy,Saint-Barthélemy,1159320633.0,Saint Barthélemy,BL,BLM,BL,652.0,29
+BO,Bolivia,Bolivia,1159320439.0,Bolivia,BO,BOL,BO,68.0,30
+BR,Brazil,Brazil,1159320441.0,Brazil,BR,BRA,BR,76.0,31
+BS,Bahamas,Bahamas,1159320415.0,Bahamas,BS,BHS,BS,44.0,32
+BW,Botswana,Botswana,1159320461.0,Botswana,BW,BWA,BW,72.0,33
+BY,Belarus,Belarus,1159320427.0,Belarus,BY,BLR,BY,112.0,34
+BZ,Belize,Belize,1159320431.0,Belize,BZ,BLZ,BZ,84.0,35
+CA,Canada,Canada,1159320467.0,Canada,CA,CAN,CA,124.0,36
+BT,Bhutan,Bhutan,1159320453.0,Bhutan,BT,BTN,BT,64.0,37
+BV,Bouvet Island,,,Bouvet Island,BV,BVT,BV,74.0,38
+CC,Cocos (Keeling) Islands,,,Cocos (Keeling) Islands,CC,CCK,CC,166.0,39
+CF,Central African Republic,Central African Republic,1159320463.0,Central African Republic,CF,CAF,CF,140.0,40
+CG,Congo,Republic of the Congo,1159320515.0,Congo,CG,COG,CG,178.0,41
+CH,Switzerland,Switzerland,1159320491.0,Switzerland,CH,CHE,CH,756.0,42
+CI,Côte d'Ivoire,Côte d'Ivoire,1159320507.0,Côte D’Ivoire,,CIV,CI,384.0,43
+CK,Cook Islands,Cook Islands,1159321129.0,Cook Islands,CK,COK,CK,184.0,44
+CL,Chile,Chile,1159320493.0,Chile,CL,CHL,CL,152.0,45
+CD,Democratic Republic of The Congo,Democratic Republic of the Congo,1159320513.0,Democratic Republic of The Congo,CD,COD,CD,180.0,46
+CP,Clipperton Island,Clipperton Island,1159320635.0,Clipperton Island,CP,,,,47
+CR,Costa Rica,Costa Rica,1159320525.0,Costa Rica,CR,CRI,CR,188.0,48
+CO,Colombia,Colombia,1159320517.0,Colombia,CO,COL,CO,170.0,49
+CM,Cameroon,Cameroon,1159320509.0,Cameroon,CM,CMR,CM,120.0,50
+DK,Denmark,Denmark,1159320547.0,Denmark,DK,DNK,DK,208.0,51
+DM,Dominica,Dominica,1159320543.0,Dominica,DM,DMA,DM,212.0,52
+ER,Eritrea,Eritrea,1159320581.0,Eritrea,ER,ERI,ER,232.0,53
+ES,Spain,Spain,1159320587.0,Spain,ES,ESP,ES,724.0,54
+DO,Dominican Republic,Dominican Republic,1159320563.0,Dominican Republic,DO,DOM,DO,214.0,55
+DZ,Algeria,Algeria,1159320565.0,Algeria,DZ,DZA,DZ,12.0,56
+EC,Ecuador,Ecuador,1159320567.0,Ecuador,EC,ECU,EC,218.0,57
+DJ,Djibouti,Djibouti,1159320541.0,Djibouti,DJ,DJI,DJ,262.0,58
+EE,Estonia,Estonia,1159320615.0,Estonia,EE,EST,EE,233.0,59
+CU,Cuba,Cuba,1159320527.0,Cuba,CU,CUB,CU,192.0,60
+EG,Egypt,Egypt,1159320575.0,Egypt,EG,EGY,EG,818.0,61
+EL,Greece,Greece,1159320811.0,Greece,EL,GRC,GR,300.0,62
+CV,Cape Verde,Republic of Cabo Verde,1159320523.0,Cape Verde,CV,CPV,CV,132.0,63
+EH,Western Sahara,Western Sahara,1159321223.0,Western Sahara,EH,ESH,EH,732.0,64
+CX,Christmas Island,,,Christmas Island,CX,CXR,CX,162.0,65
+CY,Cyprus,Cyprus,1159320533.0,Cyprus,CY,CYP,CY,196.0,66
+CZ,Czechia,Czech Republic,1159320535.0,Czechia,CZ,CZE,CZ,203.0,67
+DE,Germany,Germany,1159320539.0,Germany,DE,DEU,DE,276.0,68
+GD,Grenada,Grenada,1159320813.0,Grenada,GD,GRD,GD,308.0,69
+GE,Georgia,Georgia,1159320779.0,Georgia,GE,GEO,GE,268.0,70
+GG,Guernsey,Guernsey,1159320715.0,Guernsey,GG,GGY,GG,831.0,71
+GH,Ghana,Ghana,1159320793.0,Ghana,GH,GHA,GH,288.0,72
+GI,Gibraltar,Gibraltar,1159320719.0,Gibraltar,GI,GIB,GI,292.0,73
+FM,Micronesia,Federated States of Micronesia,1159320691.0,Micronesia,FM,FSM,FM,583.0,74
+FO,Faroes,Faeroe Islands,1159320549.0,Faroes,FO,FRO,FO,234.0,75
+FR,France,France,1159320637.0,France,FR,FRA,FR,250.0,76
+GA,Gabon,Gabon,1159320693.0,Gabon,GA,GAB,GA,266.0,77
+ET,Ethiopia,Ethiopia,1159320617.0,Ethiopia,ET,ETH,ET,231.0,78
+FI,Finland,Finland,1159320623.0,Finland,FI,FIN,FI,246.0,79
+FJ,Fiji,Fiji,1159320625.0,Fiji,FJ,FJI,FJ,242.0,80
+FK,Falkland Islands,Falkland Islands / Malvinas,1159320711.0,Falkland Islands,FK,FLK,FK,238.0,81
+GY,Guyana,Guyana,1159320817.0,Guyana,GY,GUY,GY,328.0,82
+HK,Hong Kong,Hong Kong,1159320473.0,Hong Kong,HK,HKG,HK,344.0,83
+HM,Heard Island and Mcdonald Islands,Heard I. and McDonald Islands,1159320361.0,Heard Island and Mcdonald Islands,HM,HMD,HM,334.0,84
+HN,Honduras,Honduras,1159320827.0,Honduras,HN,HND,HN,340.0,85
+HR,Croatia,Croatia,1159320833.0,Croatia,HR,HRV,HR,191.0,86
+GL,Greenland,Greenland,1159320551.0,Greenland,GL,GRL,GL,304.0,87
+GM,Gambia,The Gambia,1159320797.0,Gambia,GM,GMB,GM,270.0,88
+GN,Guinea,Guinea,1159320795.0,Guinea,GN,GIN,GN,324.0,89
+GQ,Equatorial Guinea,Equatorial Guinea,1159320801.0,Equatorial Guinea,GQ,GNQ,GQ,226.0,90
+GS,South Georgia and The South Sandwich Islands,South Georgia and the Islands,1159320731.0,South Georgia and The South Sandwich Islands,GS,SGS,GS,239.0,91
+GT,Guatemala,Guatemala,1159320815.0,Guatemala,GT,GTM,GT,320.0,92
+GU,Guam,Guam,1159321359.0,Guam,GU,GUM,GU,316.0,93
+HT,Haiti,Haiti,1159320839.0,Haiti,HT,HTI,HT,332.0,94
+GW,Guinea-Bissau,Guinea-Bissau,1159320799.0,Guinea-Bissau,GW,GNB,GW,624.0,95
+HU,Hungary,Hungary,1159320841.0,Hungary,HU,HUN,HU,348.0,96
+ID,Indonesia,Indonesia,1159320845.0,Indonesia,ID,IDN,ID,360.0,97
+IE,Ireland,Ireland,1159320877.0,Ireland,IE,IRL,IE,372.0,98
+IN,India,India,1159320847.0,India,IN,IND,IN,356.0,99
+IL,Israel,Israel,1159320895.0,Israel,IL,ISR,IL,376.0,100
+IM,Isle of Man,Isle of Man,1159320721.0,Isle of Man,IM,IMN,IM,833.0,101
+IO,British Indian Ocean Territory,British Indian Ocean Territory,1159320723.0,British Indian Ocean Territory,IO,IOT,IO,86.0,102
+IQ,Iraq,Iraq,1159320887.0,Iraq,IQ,IRQ,IQ,368.0,103
+IR,Iran,Iran,1159320881.0,Iran,IR,IRN,IR,364.0,104
+IS,Iceland,Iceland,1159320917.0,Iceland,IS,ISL,IS,352.0,105
+IT,Italy,Italy,1159320919.0,Italy,IT,ITA,IT,380.0,106
+LA,Laos,Lao PDR,1159321011.0,Laos,LA,LAO,LA,418.0,107
+LB,Lebanon,Lebanon,1159321013.0,Lebanon,LB,LBN,LB,422.0,108
+LC,Saint Lucia,Saint Lucia,1159321019.0,Saint Lucia,LC,LCA,LC,662.0,109
+LI,Liechtenstein,Liechtenstein,1159321021.0,Liechtenstein,LI,LIE,LI,438.0,110
+LK,Sri Lanka,Sri Lanka,1159321025.0,Sri Lanka,LK,LKA,LK,144.0,111
+JP,Japan,Japan,1159320937.0,Japan,JP,JPN,JP,392.0,112
+LR,Liberia,Liberia,1159321015.0,Liberia,LR,LBR,LR,430.0,113
+JE,Jersey,Jersey,1159320725.0,Jersey,JE,JEY,JE,832.0,114
+LS,Lesotho,Lesotho,1159321027.0,Lesotho,LS,LSO,LS,426.0,115
+LT,Lithuania,Lithuania,1159321029.0,Lithuania,LT,LTU,LT,440.0,116
+JM,Jamaica,Jamaica,1159320931.0,Jamaica,JM,JAM,JM,388.0,117
+JO,Jordan,Jordan,1159320935.0,Jordan,JO,JOR,JO,400.0,118
+KE,Kenya,Kenya,1159320971.0,Kenya,KE,KEN,KE,404.0,119
+LU,Luxembourg,Luxembourg,1159321031.0,Luxembourg,LU,LUX,LU,442.0,120
+LV,Latvia,Latvia,1159321033.0,Latvia,LV,LVA,LV,428.0,121
+KG,Kyrgyzstan,Kyrgyzstan,1159320977.0,Kyrgyzstan,KG,KGZ,KG,417.0,122
+KW,Kuwait,Kuwait,1159321009.0,Kuwait,KW,KWT,KW,414.0,123
+KY,Cayman Islands,Cayman Islands,1159320707.0,Cayman Islands,KY,CYM,KY,136.0,124
+KH,Cambodia,Cambodia,1159320979.0,Cambodia,KH,KHM,KH,116.0,125
+LY,Libya,Libya,1159321017.0,Libya,LY,LBY,LY,434.0,126
+KM,Comoros,Comoros,1159320521.0,Comoros,KM,COM,KM,174.0,127
+KN,Saint Kitts and Nevis,Saint Kitts and Nevis,1159320983.0,Saint Kitts and Nevis,KN,KNA,KN,659.0,128
+KZ,Kazakhstan,Kazakhstan,1159320967.0,Kazakhstan,KZ,KAZ,KZ,398.0,129
+KP,North Korea,Dem. Rep. Korea,1159321181.0,North Korea,KP,PRK,KP,408.0,130
+KR,South Korea,Republic of Korea,1159320985.0,South Korea,KR,KOR,KR,410.0,131
+MV,Maldives,Maldives,1159321053.0,Maldives,MV,MDV,MV,462.0,132
+MW,Malawi,Malawi,1159321081.0,Malawi,MW,MWI,MW,454.0,133
+MX,Mexico,Mexico,1159321055.0,Mexico,MX,MEX,MX,484.0,134
+MY,Malaysia,Malaysia,1159321083.0,Malaysia,MY,MYS,MY,458.0,135
+MH,Marshall Islands,Marshall Islands,1159321057.0,Marshall Islands,MH,MHL,MH,584.0,136
+MK,North Macedonia,North Macedonia,1159321061.0,North Macedonia,MK,MKD,MK,807.0,137
+MN,Mongolia,Mongolia,1159321071.0,Mongolia,MN,MNG,MN,496.0,138
+MO,Macau,Macao,1159320475.0,Macau,MO,MAC,MO,446.0,139
+MC,Monaco,Monaco,1159321043.0,Monaco,MC,MCO,MC,492.0,140
+MP,Northern Mariana Islands,Northern Mariana Islands,1159321361.0,Northern Mariana Islands,MP,MNP,MP,580.0,141
+MR,Mauritania,Mauritania,1159321075.0,Mauritania,MR,MRT,MR,478.0,142
+MS,Montserrat,Montserrat,1159320727.0,Montserrat,MS,MSR,MS,500.0,143
+ML,Mali,Mali,1159321063.0,Mali,ML,MLI,ML,466.0,144
+MM,Myanmar/Burma,Myanmar,1159321067.0,Myanmar/Burma,MM,MMR,MM,104.0,145
+MD,Moldova,Moldova,1159321045.0,Moldova,MD,MDA,MD,498.0,146
+MT,Malta,Malta,1159321065.0,Malta,MT,MLT,MT,470.0,147
+MU,Mauritius,Mauritius,1159321079.0,Mauritius,MU,MUS,MU,480.0,148
+ME,Montenegro,Montenegro,1159321069.0,Montenegro,ME,MNE,ME,499.0,149
+MG,Madagascar,Madagascar,1159321051.0,Madagascar,MG,MDG,MG,450.0,150
+NC,New Caledonia,New Caledonia,1159320641.0,New Caledonia,NC,NCL,NC,540.0,151
+NE,Niger,Niger,1159321087.0,Niger,NE,NER,NE,562.0,152
+NF,Norfolk Island,Norfolk Island,1159320365.0,Norfolk Island,NF,NFK,NF,574.0,153
+NG,Nigeria,Nigeria,1159321089.0,Nigeria,NG,NGA,NG,566.0,154
+NI,Nicaragua,Nicaragua,1159321091.0,Nicaragua,NI,NIC,NI,558.0,155
+MA,Morocco,Morocco,1159321035.0,Morocco,MA,MAR,MA,504.0,156
+NL,Netherlands,Netherlands,1159321101.0,Netherlands,NL,NLD,NL,528.0,157
+NO,Norway,Norway,1159321109.0,Norway,NO,NOR,NO,578.0,158
+MZ,Mozambique,Mozambique,1159321073.0,Mozambique,MZ,MOZ,MZ,508.0,159
+NA,Namibia,Namibia,1159321085.0,Namibia,NA,NAM,NA,516.0,160
+PA,Panama,Panama,1159321161.0,Panama,PA,PAN,PA,591.0,161
+NP,Nepal,Nepal,1159321121.0,Nepal,NP,NPL,NP,524.0,162
+NR,Nauru,Nauru,1159321123.0,Nauru,NR,NRU,NR,520.0,163
+NU,Niue,Niue,1159321133.0,Niue,NU,NIU,NU,570.0,164
+PE,Peru,Peru,1159321163.0,Peru,PE,PER,PE,604.0,165
+PG,Papua New Guinea,Papua New Guinea,1159321173.0,Papua New Guinea,PG,PNG,PG,598.0,166
+PH,Philippines,Philippines,1159321169.0,Philippines,PH,PHL,PH,608.0,167
+PK,Pakistan,Pakistan,1159321153.0,Pakistan,PK,PAK,PK,586.0,168
+NZ,New Zealand,New Zealand,1159321135.0,New Zealand,NZ,NZL,NZ,554.0,169
+OM,Oman,Oman,1159321151.0,Oman,OM,OMN,OM,512.0,170
+RO,Romania,Romania,1159321199.0,Romania,RO,ROU,RO,642.0,171
+PM,Saint Pierre and Miquelon,Saint Pierre and Miquelon,1159320647.0,Saint Pierre and Miquelon,PM,SPM,PM,666.0,172
+PN,Pitcairn Islands,Pitcairn Islands,1159320729.0,Pitcairn Islands,PN,PCN,PN,612.0,173
+RS,Serbia,Serbia,1159321267.0,Serbia,RS,SRB,RS,688.0,174
+RU,Russian Federation,Russian Federation,1159321201.0,Russian Federation,RU,RUS,RU,643.0,175
+PL,Poland,Poland,1159321179.0,Poland,PL,POL,PL,616.0,176
+PR,Puerto Rico,Puerto Rico,1159321363.0,Puerto Rico,PR,PRI,PR,630.0,177
+PS,Palestine,Palestine,1159320899.0,Palestine,PS,PSE,PS,275.0,178
+PT,Portugal,Portugal,1159321187.0,Portugal,PT,PRT,PT,620.0,179
+PW,Palau,Palau,1159321171.0,Palau,PW,PLW,PW,585.0,180
+PY,Paraguay,Paraguay,1159321195.0,Paraguay,PY,PRY,PY,600.0,181
+QA,Qatar,Qatar,1159321197.0,Qatar,QA,QAT,QA,634.0,182
+SA,Saudi Arabia,Saudi Arabia,1159321225.0,Saudi Arabia,SA,SAU,SA,682.0,183
+SB,Solomon Islands,Solomon Islands,1159321249.0,Solomon Islands,SB,SLB,SB,90.0,184
+SC,Seychelles,Seychelles,1159321291.0,Seychelles,SC,SYC,SC,690.0,185
+RW,Rwanda,Rwanda,1159321219.0,Rwanda,RW,RWA,RW,646.0,186
+SD,Sudan,Sudan,1159321229.0,Sudan,SD,SDN,SD,729.0,187
+SE,Sweden,Sweden,1159321287.0,Sweden,SE,SWE,SE,752.0,188
+SO,Somalia,Somalia,1159321261.0,Somalia,SO,SOM,SO,706.0,189
+SR,Suriname,Suriname,1159321281.0,Suriname,SR,SUR,SR,740.0,190
+TT,Trinidad and Tobago,Trinidad and Tobago,1159321321.0,Trinidad and Tobago,TT,TTO,TT,780.0,191
+TV,Tuvalu,Tuvalu,1159321333.0,Tuvalu,TV,TUV,TV,798.0,192
+SI,Slovenia,Slovenia,1159321285.0,Slovenia,SI,SVN,SI,705.0,193
+SJ,Svalbard and Jan Mayen,,,Svalbard and Jan Mayen,SJ,SJM,SJ,744.0,194
+SS,South Sudan,South Sudan,1159321235.0,South Sudan,SS,SSD,SS,728.0,195
+ST,São Tomé and Principe,São Tomé and Principe,1159321273.0,São Tomé and Príncipe,,STP,ST,678.0,196
+TJ,Tajikistan,Tajikistan,1159321307.0,Tajikistan,TJ,TJK,TJ,762.0,197
+SV,El Salvador,El Salvador,1159321253.0,El Salvador,SV,SLV,SV,222.0,198
+SY,Syria,Syria,1159321295.0,Syria,SY,SYR,SY,760.0,199
+TK,Tokelau,,,Tokelau,TK,TKL,TK,772.0,200
+TL,Timor-Leste,Timor-Leste,1159321313.0,Timor-Leste,TL,TLS,TL,626.0,201
+SZ,Eswatini,Kingdom of eSwatini,1159321289.0,Eswatini,SZ,SWZ,SZ,748.0,202
+TC,Turks and Caicos Islands,Turks and Caicos Islands,1159320737.0,Turks and Caicos Islands,TC,TCA,TC,796.0,203
+TZ,United Republic of Tanzania,Tanzania,1159321337.0,United Republic of Tanzania,TZ,TZA,TZ,834.0,204
+UA,Ukraine,Ukraine,1159321345.0,Ukraine,UA,UKR,UA,804.0,205
+TD,Chad,Chad,1159321301.0,Chad,TD,TCD,TD,148.0,206
+TM,Turkmenistan,Turkmenistan,1159321309.0,Turkmenistan,TM,TKM,TM,795.0,207
+SL,Sierra Leone,Sierra Leone,1159321251.0,Sierra Leone,SL,SLE,SL,694.0,208
+SM,San Marino,San Marino,1159321255.0,San Marino,SM,SMR,SM,674.0,209
+TN,Tunisia,Tunisia,1159321327.0,Tunisia,TN,TUN,TN,788.0,210
+SK,Slovakia,Slovakia,1159321283.0,Slovakia,SK,SVK,SK,703.0,211
+TF,French Southern and Antarctic Lands,French Southern and Antarctic Lands,1159320631.0,French Southern and Antarctic Lands,TF,ATF,TF,260.0,212
+TG,Togo,Togo,1159321303.0,Togo,TG,TGO,TG,768.0,213
+TH,Thailand,Thailand,1159321305.0,Thailand,TH,THA,TH,764.0,214
+TO,Tonga,Tonga,1159321319.0,Tonga,TO,TON,TO,776.0,215
+TR,Turkey,Turkey,1159321331.0,Türkiye,,TUR,TR,792.0,216
+SN,Senegal,Senegal,1159321243.0,Senegal,SN,SEN,SN,686.0,217
+SG,Singapore,Singapore,1159321247.0,Singapore,SG,SGP,SG,702.0,218
+SH,"Saint Helena, Ascension and Tristan Da Cunha",Saint Helena,1159320733.0,"Saint Helena, Ascension and Tristan Da Cunha",SH,SHN,SH,654.0,219
+UM,United States Minor Outlying Islands,United States Minor Outlying Islands,1159321367.0,United States Minor Outlying Islands,UM,UMI,UM,581.0,220
+UG,Uganda,Uganda,1159321343.0,Uganda,UG,UGA,UG,800.0,221
+UK,United Kingdom,United Kingdom,1159320713.0,United Kingdom,UK,GBR,GB,826.0,222
+VG,British Virgin Islands,British Virgin Islands,1159320739.0,British Virgin Islands,VG,VGB,VG,92.0,223
+VI,Us Virgin Islands,United States Virgin Islands,1159321371.0,Us Virgin Islands,VI,VIR,VI,850.0,224
+YE,Yemen,Yemen,1159321425.0,Yemen,YE,YEM,YE,887.0,225
+ZA,South Africa,South Africa,1159321431.0,South Africa,ZA,ZAF,ZA,710.0,226
+VN,Vietnam,Vietnam,1159321417.0,Viet nam,,VNM,VN,704.0,227
+ZM,Zambia,Zambia,1159321439.0,Zambia,ZM,ZMB,ZM,894.0,228
+ZW,Zimbabwe,Zimbabwe,1159321441.0,Zimbabwe,ZW,ZWE,ZW,716.0,229
+BQ,"Bonaire, Sint Eustatius and Saba",,,"Bonaire, Sint Eustatius and Saba",BQ,BES,BQ,535.0,230
+CW,Curaçao,Curaçao,1159321099.0,Curaçao,CW,CUW,CW,531.0,231
+SX,Sint-Maarten,Sint Maarten,1159321103.0,Sint-Maarten,SX,SXM,SX,534.0,232
+UY,Uruguay,Uruguay,1159321353.0,Uruguay,UY,URY,UY,858.0,233
+VU,Vanuatu,Vanuatu,1159321421.0,Vanuatu,VU,VUT,VU,548.0,234
+WF,Wallis and Futuna,Wallis and Futuna Islands,1159320649.0,Wallis and Futuna,WF,WLF,WF,876.0,235
+WS,Samoa,Samoa,1159321423.0,Samoa,WS,WSM,WS,882.0,236
+XA,Paracel Islands,,,Paracel Islands,XA,,,,237
+XB,Spratly Islands,Spratly Islands,1159321165.0,Spratly Islands,XB,,,,238
+XC,Aksai Chin,,,Aksai Chin,XC,,,,239
+XE,China/India,,,China/India,XE,,,,240
+XF,Hala'Ib Triangle,,,Hala'Ib Triangle,XF,,,,241
+XD,Arunachal Pradesh,,,Arunachal Pradesh,XD,,,,242
+XG,Ilemi Triangle,,,Ilemi Triangle,XG,,,,243
+XL,Navassa Island,,,Navassa Island,XL,,,,244
+XM,Scarborough Reef,Scarborough Reef,1159321227.0,Scarborough Reef,XM,,,,245
+XN,Senkaku Islands,,,Senkaku Islands,XN,,,,246
+UZ,Uzbekistan,Uzbekistan,1159321405.0,Uzbekistan,UZ,UZB,UZ,860.0,247
+VA,Vatican City,Vatican,1159321407.0,Vatican City,VA,VAT,VA,336.0,248
+VC,Saint Vincent and The Grenadines,Saint Vincent and the Grenadines,1159321409.0,Saint Vincent and The Grenadines,VC,VCT,VC,670.0,249
+XH,Jammu Kashmir,,,Jammu Kashmir,XH,,,,250
+XI,Kuril Islands,,,Kuril Islands,XI,,,,251
+XO,Bassas Da India,,,Bassas Da India,XO,,,,252
+XU,Abyei,,,Abyei,XU,,,,253
+XV,Bir Tawil (Disputed Territory),Bir Tawil,1729635091.0,Bir Tawil (Disputed Territory),XV,,,,254
+VE,Venezuela,Venezuela,1159321411.0,Venezuela,VE,VEN,VE,862.0,255
+CN,China,China,1159320471.0,China,CN,CHN,CN,156.0,256
+TW,Taiwan,Taiwan,1159321335.0,,,TWN,TW,158.0,257
+US,United States,United States,1159321369.0,United States,US,USA,US,840.0,258
+AK,Alaska (US),,,,,USA,US,840.0,259
+HI,Hawaii (US),,,,,USA,US,840.0,260
+OC_SO,Southern Ocean,,,,,,,,261
+OC_SAO,Southern Atlantic Ocean,,,,,,,,262
+OC_SPO,South Pacific Ocean,,,,,,,,263
+OC_NPO,North Pacific Ocean,,,,,,,,264
+OC_SCS,South China and Easter Archipelagic Seas,,,,,,,,265
+OC_IO,Indian Ocean,,,,,,,,266
+OC_MR,Mediterranean Region,,,,,,,,267
+OC_BS,Baltic Sea,,,,,,,,268
+OC_NAO,North Atlantic Ocean,,,,,,,,269
+OC_AO,Arctic Ocean,,,,,,,,270
+OC_CS,Caspian Sea,,,,,,,,271
+GF,French Guiana,,,,,GUF,GF,254.0,272
+GP,Guadeloupe,,,,,GLP,GP,312.0,273
+MQ,Martinique,,,,,MTQ,MQ,474.0,274
+YT,Mayotte,,,,,MYT,YT,175.0,275
+MF,Saint-Martin (French part),Saint-Martin,1159320639.0,,,MAF,MF,663.0,276
+RE,Réunion,,,,,REU,RE,638.0,277
+AX,Åland Islands,Åland Islands,1159320621.0,,,ALA,AX,248.0,278
+SLL,Somaliland,Somaliland,1159321259.0,,,,,,279
+XK,Kosovo,Kosovo,1159321007.0,,,XKX,XK,,280
+USG,US Naval Base Guantanamo Bay,US Naval Base Guantanamo Bay,1159320529.0,,,,,,281
+BRI,Brazilian Island,Brazilian Island,1729632181.0,,,,,,282
+CYN,Northern Cyprus,Northern Cyprus,1159320531.0,,,,,,283
+CNM,Cyprus U.N. Buffer Zone,Cyprus U.N. Buffer Zone,1159320511.0,,,,,,284
+KAS,Siachen Glacier,Siachen Glacier,1159320963.0,,,,,,285
+KAB,Baikonur Cosmodrome,Baikonur Cosmodrome,1159320965.0,,,,,,286
+EWSB,Cyprus U.K. Bases,,,,,,,,287
+SPI,Southern Patagonian Ice Field,Southern Patagonian Ice Field,1729635141.0,,,,,,288
+BJN,Bajo Nuevo Bank (Petrel Islands),Bajo Nuevo Bank (Petrel Islands),1159320425.0,,,,,,289
+SER,Serranilla Bank,Serranilla Bank,1159321245.0,,,,,,290

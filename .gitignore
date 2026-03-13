@@ -1,0 +1,20 @@
+.idea
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/.*\.ipynb\.~*
+
+# Python virtual environment
+.venv
+
+# config file:
+.env
+
+# exclude the eurostat_goas_seavox_mask shape files
+eurostat_goas_seavox_mask/data/*
+!eurostat_goas_seavox_mask/data/README.md
+!eurostat_goas_seavox_mask/data/*.nc
+
+# exclude the wold_bank shape files
+world_bank_mask/data/*
+!world_bank_mask/data/README.md
+!world_bank_mask/data/*.nc
