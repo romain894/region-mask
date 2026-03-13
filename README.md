@@ -15,8 +15,8 @@ This enables consistent and weighted regional aggregation of gridded data.
 **Cite:** Thomas, R., & Cigna, G. (2026). Region Mask: 3D Fractional Region Mask for Aggregating Global Gridded Data.
 
 GitHub repository: https://github.com/romain894/region-mask  
-Zenodo repository URL:   
-Repository DOI:   
+Zenodo repository URL: https://zenodo.org/records/19007673  
+Repository DOI: https://doi.org/10.5281/zenodo.19007672  
 
 Romain THOMAS - romain.thomas@polito.it  
 Giulia CIGNA - giulia.cigna@polito.it  
@@ -25,9 +25,9 @@ DIATI - Politecnico di Torino
 
 ### Related Works
 
-  - Elena De Petrillo, Simon Felix Fahrländer, Marta Tuninetti, Lauren Seaby Andersen, Luca Monaco, Luca Ridolfi, and 
+  - [Elena De Petrillo, Simon Felix Fahrländer, Marta Tuninetti, Lauren Seaby Andersen, Luca Monaco, Luca Ridolfi, and 
 Francesco Laio (2025). Country-ocean-moisture-flows-reconciled-with-ERA5-reanalysis obtained processing Lagrangian 
-moisture connections
+moisture connections](https://doi.org/10.5281/zenodo.10400694)
 
 
 ### Datasets and Licenses
