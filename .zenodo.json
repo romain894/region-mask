@@ -1,0 +1,43 @@
+{
+    "title": "3D Fractional Region Mask for Aggregating Global Gridded Data",
+    "doi": "10.5281/zenodo.19007672",
+    "upload_type": "software",
+    "access_right": "open",
+    "license": " GPL-3.0-only",
+    "language": "eng",
+    "creators": [
+        {
+            "name": "Thomas, Romain, François",
+            "orcid": "0009-0008-9900-1930",
+            "affiliation": "Department of Environment, Land and Infrastructure Engineering, Politecnico di Torino, Turin, Italy",
+            "type": "ProjectMember"
+        },
+        {
+            "name": "Cigna, Giulia",
+            "orcid": "0009-0008-7771-6265",
+            "affiliation": "Department of Environment, Land and Infrastructure Engineering, Politecnico di Torino, Turin, Italy",
+            "type": "ProjectMember"
+        }
+    ],
+    "related_identifiers": [
+        {
+            "identifier": "https://github.com/romain894/region-mask",
+            "relation": "isSupplementTo",
+            "resource_type": "software"
+        },
+        {
+            "identifier": "10.5281/zenodo.10400694",
+            "relation": "isSupplementedBy",
+            "resource_type": "dataset"
+        }
+    ],
+    "keywords": [
+        "Fractional countries oceans mask",
+        "Fractional grid masks",
+        "NetCDF region masks",
+        "Python",
+        "Data analysis",
+        "Scientific research"
+    ],
+    "description": "This repository generates a 3D fractional region mask to aggregate global gridded datasets (e.g., climate, hydrological, or environmental data) at a regional scale. \n\n The mask stores, for each region and each grid cell, the fraction of the cell area covered by the region. This enables consistent and weighted regional aggregation of gridded data. \n\n Please cite: Thomas, R., & Cigna, G. (2026). 3D Fractional Region Mask for Aggregating Global Gridded Data. Zenodo. https://doi.org/10.5281/zenodo.19007672 \n\n For more details, see the README on GitHub: https://github.com/romain894/region-mask"
+}
