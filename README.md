@@ -1,4 +1,9 @@
+![From geometries to fractional mask: example with Italy](https://raw.githubusercontent.com/romain894/region-mask/main/intro_plot.png)
+
 # Region Mask: 3D Fractional Region Mask for Aggregating Global Gridded Data
+
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19007672.svg)](https://doi.org/10.5281/zenodo.19007672)
 
 This repository generates a **3D fractional region mask** to aggregate global gridded datasets (e.g., climate, 
 hydrological, or environmental data) at a regional scale.
@@ -12,22 +17,22 @@ This enables consistent and weighted regional aggregation of gridded data.
 
 ### Credits
 
-**Cite:** Thomas, R., & Cigna, G. (2026). Region Mask: 3D Fractional Region Mask for Aggregating Global Gridded Data.
+**Cite:** Thomas, R., & Cigna, G. (2026). *3D Fractional Region Mask for Aggregating Global Gridded Data.* Zenodo. https://doi.org/10.5281/zenodo.19007672
 
 GitHub repository: https://github.com/romain894/region-mask  
-Zenodo repository URL: https://zenodo.org/records/19007673  
+Zenodo repository URL: https://zenodo.org/records/19007672  
 Repository DOI: https://doi.org/10.5281/zenodo.19007672  
 
 Romain THOMAS - romain.thomas@polito.it  
 Giulia CIGNA - giulia.cigna@polito.it  
-DIATI - Politecnico di Torino
+Department of Environment, Land and Infrastructure Engineering, Politecnico di Torino, Turin, Italy
 
 
 ### Related Works
 
-  - [Elena De Petrillo, Simon Felix Fahrländer, Marta Tuninetti, Lauren Seaby Andersen, Luca Monaco, Luca Ridolfi, and 
-Francesco Laio (2025). Country-ocean-moisture-flows-reconciled-with-ERA5-reanalysis obtained processing Lagrangian 
-moisture connections](https://doi.org/10.5281/zenodo.10400694)
+  - De Petrillo, E., Fahrländer, S. F., Tuninetti, M., Andersen, L. S., Monaco, L., Ridolfi, L., & Laio, F. (2025). 
+*Country-ocean-moisture-flows-reconciled-with-ERA5-reanalysis obtained processing Lagrangian moisture connections.*
+Zenodo. https://doi.org/10.5281/zenodo.10400694
 
 
 ### Datasets and Licenses
@@ -98,12 +103,22 @@ Notebook: `generate_mask.ipynb`
 
 Output: `data/mask_countries_oceans_-0.25_90.25_0.5.nc`
 
+### Illustrations
+
+The following plots come from the mask generated with the Natural Earth shapefiles.
+
 Mask of Italy:  
 ![Plot of the mask for Italy](https://raw.githubusercontent.com/romain894/region-mask/main/single_region_plot.png)
 
-Sum of the regions before normalisation:  
-![Plot of the sum of the regions before normalisation](https://raw.githubusercontent.com/romain894/region-mask/main/sum_of_regions.png)
+Sum of the regions before normalization:  
+![Plot of the sum of the regions before normalization: ](https://raw.githubusercontent.com/romain894/region-mask/main/sum_of_regions.png)
 
+Distribution of the summed regional values before normalization:
+![Plot of the distribution of the summed regional values before normalization](https://raw.githubusercontent.com/romain894/region-mask/main/sum_distribution.png)
+
+This distribution can be related to minor numerical computation errors and misalignment of the shape files. 
+The cells with a value of 0.5 are the top cells as there are no geometries in the 90 - 90.25 latitude. 
+The 90.25 value is linked to the bounds of the RECON dataset, linked to the bounds of UTrack (and thus ERA5).
 
 ## Inputs
 
