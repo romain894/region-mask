@@ -17,14 +17,15 @@ This enables consistent and weighted regional aggregation of gridded data.
 
 ### Credits
 
-**Cite:** Thomas, R., & Cigna, G. (2026). *3D Fractional Region Mask for Aggregating Global Gridded Data.* Zenodo. https://doi.org/10.5281/zenodo.19007672
+**Cite:** Thomas, R., & Cigna, G. & De Petrillo, E. (2026). *3D Fractional Region Mask for Aggregating Global Gridded Data.* Zenodo. https://doi.org/10.5281/zenodo.19007672
 
 GitHub repository: https://github.com/romain894/region-mask  
 Zenodo repository URL: https://zenodo.org/records/19007672  
 Repository DOI: https://doi.org/10.5281/zenodo.19007672  
 
-Romain THOMAS - romain.thomas@polito.it  
-Giulia CIGNA - giulia.cigna@polito.it  
+Romain Thomas - romain.thomas@polito.it  
+Giulia Cigna - giulia.cigna@polito.it  
+Elena De Petrillo - elena.depetrillo@polito.it  
 Department of Environment, Land and Infrastructure Engineering, Politecnico di Torino, Turin, Italy
 
 
@@ -45,13 +46,18 @@ Notebooks in the repository are licensed under: **GPLv3** - GNU General Public L
 
 The full license text is provided in the `LICENSE-code.txt` file.
 
-#### Shapefiles and Masks:
+#### Masks and Shapefiles in `/data` (Natural Earth)
 
-  - Shapefiles in the `/data` folder of this repository: public domain (**CC0 1.0 Universal**)
-  - Region Mask: 3D Fractional Region Mask (based on Natural Earth data) © 2026 by Romain Thomas, Giulia Cigna is licensed under CC BY 4.0 (`/data/mask_countries_oceans_ne_-0.25_90.25_0.5.nc`)
+The datasets based on Natural Earth are in the `/data` folder at the root of this repository and licensed as follows:
 
-*To use the masks based on the Eurostat, GOaS and SeaVox datasets or the World Bank dataset, you must comply with their respective
-licenses (folders `/eurostat_goas_seavox_mask` and `world_bank_mask`) and © 2026 by Romain Thomas, Giulia Cigna is licensed under CC BY 4.0*
+  - Shapefiles: *public domain (**CC0 1.0 Universal**)*
+  - Masks: *Region Mask: 3D Fractional Region Mask © 2026 by Romain Thomas, Giulia Cigna, Elena De Petrillo **CC BY 4.0***
+
+#### Masks and Shapefiles in `/eurostat_goas_seavox_mask/data` and `/world_bank_mask/data`
+
+To use the masks based on the Eurostat, GOaS and SeaVox datasets or the World Bank dataset, you must comply with their respective
+licenses (folders `/eurostat_goas_seavox_mask` and `world_bank_mask`) and *Region Mask: 3D Fractional Region Mask 
+© 2026 by Romain Thomas, Giulia Cigna, Elena De Petrillo CC BY 4.0*
 
 
 ## Methodological Framework
