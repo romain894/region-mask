@@ -13,7 +13,8 @@ In this folder, you can find the notebooks and default `.env.template` file to g
 
 The mask based on the World Bank Official Boundaries dataset is available in this repository at the following path:
 `/world_bank_mask/data/mask_wb_oceans_countries_lat90.25_lon-0.25_res0.5.nc` under the following terms: 
-Creative Commons Attribution 4.0
+Region Mask: 3D Fractional Region Mask © 2026 by Romain Thomas, Giulia Cigna, Elena De Petrillo CC BY 4.0 ;
+© World Bank CC BY 4.0
 
 ## Input datasets licenses and attributions
 
