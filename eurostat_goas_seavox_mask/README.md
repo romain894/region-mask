@@ -14,8 +14,8 @@ and oceans using the Eurostat, GOaS and SeaVox datasets.
 ## Output mask
 
 The mask based on the Eurostat, GOaS and SeaVox datasets is available in this repository at the following path:
-`/eurostat_goas_seavox_mask/eurostat_goas_seavox_mask.nc` under the following terms: 
-© EuroGeographics for the administrative boundaries ; Non-commercial use only ; 
+`/eurostat_goas_seavox_mask/data/mask_eurostat_goas_seavox_oceans_countries_lat90.25_lon-0.25_res0.5.nc` under the following terms: 
+© EuroGeographics for the administrative boundaries ; Non-commercial use only ;
 Global Oceans and Seas, version 1 (Flanders Marine Institute, 2021) CC BY 4.0 ; 
 Polygon dataset of the extent of water bodies from the SeaVoX Salt and Fresh Water Body Gazetteer (v19) CC BY 4.0
 
