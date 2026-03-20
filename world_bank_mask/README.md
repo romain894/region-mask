@@ -4,8 +4,8 @@ In this folder, you can find the notebooks and default `.env.template` file to g
 
 ## Input Data
 
-  - Countries shape file: World Bank Official Boundaries dataset Creative Commons Attribution 4.0
-  - Ocean shape file: World Bank Official Boundaries dataset Creative Commons Attribution 4.0
+  - Countries shapefile: World Bank Official Boundaries dataset Creative Commons Attribution 4.0
+  - Ocean shapefile: World Bank Official Boundaries dataset Creative Commons Attribution 4.0
   - CSV file with custom ids (`data/codes_id.csv`): CC0 1.0 Universal (public domain)
 
 
@@ -13,15 +13,22 @@ In this folder, you can find the notebooks and default `.env.template` file to g
 
 The mask based on the World Bank Official Boundaries dataset is available in this repository at the following path:
 `/world_bank_mask/data/mask_wb_oceans_countries_lat90.25_lon-0.25_res0.5.nc` under the following terms: 
-Region Mask: 3D Fractional Region Mask © 2026 by Romain Thomas, Giulia Cigna, Elena De Petrillo CC BY 4.0 ;
+Region Mask: 3D Fractional Region Mask © 2026 by Romain Thomas, Giulia Cigna, Elena De Petrillo CC BY 4.0;
 © World Bank CC BY 4.0
 
 ## Input datasets licenses and attributions
 
+The shapefiles used to generate this specific output mask were downloaded in April 2025.
+
 - `WB_GAD_ADM0.shp`  
-  World Bank [Official Boundaries - Admin 0](https://datacatalogfiles.worldbank.org/ddh-published/0038272/5/DR0095371/World%20Bank%20Official%20Boundaries%20(Shapefiles)/World%20Bank%20Official%20Boundaries%20-%20Admin%200.zip)
+  World Bank [Official Boundaries - Admin 0](https://datacatalog.worldbank.org/search/dataset/0038272/world-bank-official-boundaries)
+
+  CC BY 4.0
+
 - `WB_GAD_ocean_mask.shp`  
-  World Bank [Official Boundaries - Ocean Mask](https://datacatalogfiles.worldbank.org/ddh-published/0038272/5/DR0095371/World%20Bank%20Official%20Boundaries%20(Shapefiles)/World%20Bank%20Official%20Boundaries%20-%20Admin%200.zip)
+  World Bank [Official Boundaries - Ocean Mask](https://datacatalog.worldbank.org/search/dataset/0038272/world-bank-official-boundaries)
+
+  CC BY 4.0
 
 
 

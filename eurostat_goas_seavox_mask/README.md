@@ -5,8 +5,8 @@ and oceans using the Eurostat, GOaS and SeaVox datasets.
 
 ## Input Data:
 
-  - Countries shape file: Eurostat dataset-specific non-commercial license © EuroGeographics for the administrative boundaries
-  - Oceans shape file: Creative Commons Attribution 4.0 International
+  - Countries shapefile: Eurostat dataset-specific non-commercial license © EuroGeographics for the administrative boundaries
+  - Oceans shapefile: Creative Commons Attribution 4.0 International
   - Caspian Sea shape file: Creative Commons Attribution 4.0 International
   - CSV file with custom ids (`data/codes_id.csv`): CC0 1.0 Universal (public domain)
 

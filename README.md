@@ -71,7 +71,29 @@ The workflow consists of two main stages:
 Notebook: `generate_shp_countries_ne_10m.ipynb`
 
 - Split countries with extra-territories (e.g., overseas or geographically detached regions)
+  - List of changes from original [Natural Earth 10m - Admin 0](/data/ne_10m/ne_10m_admin_0_countries)
+    
+    Overseas French territories detached from France (French Guiana, Guadalupe, Martinique, Saint Martin, Mayotte and Reunion);
+  
+    Paracel Islands detached from China;
+    
+    Hawaii and Alaska detached from the United States of America;
+
+    Indian Ocean Territories split into Christmas Island and Cocos Keeling Island;
+
+    Svalbard and Jan Mayen and Bouvet Island detached from Norway;
+
+    Tokelau detached from New Zealand;
+
+    Coral Sea Islands and Ashmore and Cartier Islands merged into Australia;
+
+    Akrotiri and Dhekelia merged into Cyprus U.K. Bases;
+
+
 - Standardize metadata and identifiers
+
+  - Note: The ISO alpha2 code of Namibia is 'NA', which is read as a NaN value by default. 
+This was solved by removing the 'NA' string from the [default recognized NaN values](https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#na-values).
 
 Output: `data/countries_from_ne_10m`
 
