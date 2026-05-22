@@ -117,6 +117,18 @@ Notebook: `merge_shp_ne_10m.ipynb`
 
 Output: `data/ne_10m_oceans_countries`
 
+
+1.4. Only land and ocean
+
+Alternatively, if the target is only the land and ocean division use
+Notebook: `generate_shp_land_ocean_ne_10m.ipynb` 
+
+- Flatten countries into a single land entity
+- Merge land .shp with ocean .shp
+- Ensure consistent CRS (EPSG:4326)
+
+Output: `data/ne_10m_land_ocean`
+
 ### 2. Fractional Mask Generation
 
 Notebook: `generate_mask.ipynb`
