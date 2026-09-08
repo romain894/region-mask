@@ -48,6 +48,21 @@ or invocation errors may use another nonzero exit code. Full generation is the
 normal acceptance check; the small unit tests diagnose the comparison machinery.
 Run the full check once after a completed change, rather than after every edit.
 
+## Continuous integration
+
+[`.github/workflows/regression.yml`](../.github/workflows/regression.yml) runs
+`make test` followed by `make regression` for every push, pull request and
+manual dispatch. It checks out full Git history because the baseline is read
+from the commit pinned in `baseline.json`, installs the test requirements under
+Python 3.12, and has a 30-minute job limit.
+
+The job always uploads its Markdown report, JSON metrics and manifest, optional
+difference figures, and executed-notebook logs as a 30-day GitHub Actions
+artifact. It intentionally does not upload newly generated shapefiles or NetCDF
+files: the report contains their hashes and the Git-tracked baseline remains the
+published reference. Download the artifact from the workflow run when a result
+needs review.
+
 The unit suite also exercises analytic fractional-mask and longitude-split cases
 against the production functions extracted from the notebook AST, without
 executing its top-level I/O. Only that small test adapter needs replacement when

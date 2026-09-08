@@ -190,6 +190,10 @@ artifact comparisons, baseline policy, and the adapter interface for future
 Python modules and marimo notebooks. Runs write to isolated, ignored
 `regression-runs/` directories and do not overwrite production datasets.
 
+GitHub Actions runs `make test` and the complete `make regression` workflow on
+each push and pull request. The workflow uploads the Markdown report, metrics,
+manifest and execution logs for 30 days, including when a regression fails.
+
 To set the variables and paths, copy the file `.env.template` and name it `.env`.
 
 You can then set the environment variables in the `.env` file following the instructions in the comments.
