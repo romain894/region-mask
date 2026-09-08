@@ -175,6 +175,21 @@ update the paths in the main `.env` file to generate the mask.
 
 ## Configuration
 
+### Regression testing
+
+Before changing the processing code, reproduce the Git-tracked Natural Earth
+outputs and generate a Markdown comparison report:
+
+```bash
+make test
+make regression
+```
+
+See [the regression testing guide](regression/README.md) for dependencies,
+artifact comparisons, baseline policy, and the adapter interface for future
+Python modules and marimo notebooks. Runs write to isolated, ignored
+`regression-runs/` directories and do not overwrite production datasets.
+
 To set the variables and paths, copy the file `.env.template` and name it `.env`.
 
 You can then set the environment variables in the `.env` file following the instructions in the comments.

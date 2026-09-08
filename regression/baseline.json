@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "reference_commit": "ad0760a3b3210aba51593a92bc5935f2b987feca",
+  "description": "Existing, Git-tracked Natural Earth outputs before the Python/marimo migration. Historical execution environment is not recorded.",
+  "inputs": ["data/ne_10m", "data/codes_id.csv"],
+  "settings": {
+    "MASK_MIN_LON": "-0.25",
+    "MASK_MIN_LAT": "-89.75",
+    "MASK_MAX_LON": "359.75",
+    "MASK_MAX_LAT": "90.25",
+    "MASK_RESOLUTION": "0.5",
+    "NORMALIZE_MASK": "true",
+    "DASK_NUM_WORKERS": "4",
+    "DASK_MEMORY_LIMIT": "2GB"
+  },
+  "shapefiles": [
+    "data/countries_from_ne_10m/countries_from_ne_10m.shp",
+    "data/oceans_from_ne_10m/oceans_from_ne_10m.shp",
+    "data/ne_10m_oceans_countries/ne_10m_oceans_countries.shp",
+    "data/ne_10m_land_ocean/ne_10m_land_ocean.shp"
+  ],
+  "coverage_shapefiles": [
+    "data/ne_10m_oceans_countries/ne_10m_oceans_countries.shp",
+    "data/ne_10m_land_ocean/ne_10m_land_ocean.shp"
+  ],
+  "netcdf": [
+    "data/mask_ne_10m_oceans_countries_lat90.25_lon-0.25_res0.5.nc",
+    "data/mask_ne_10m_land_ocean_lat90.25_lon-0.25_res0.5.nc"
+  ],
+  "tables": [
+    "data/ids_ne_10m_oceans_countries.csv",
+    "data/ids_ne_10m_land_ocean.csv"
+  ]
+}

@@ -10,6 +10,9 @@
 # config file:
 .env
 
+# Generated regression workspaces, reports and execution logs
+regression-runs/
+
 # exclude the eurostat_goas_seavox_mask shape files
 eurostat_goas_seavox_mask/data/*
 !eurostat_goas_seavox_mask/data/README.md

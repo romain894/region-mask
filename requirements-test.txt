@@ -1,0 +1,5 @@
+-r requirements.txt
+nbclient>=0.10
+nbformat>=5
+ipykernel>=6
+shapely>=2.1

@@ -1,0 +1,155 @@
+"""Markdown is the release report; JSON is the machine-readable source."""
+
+from pathlib import Path
+import json
+
+from .common import write_json
+
+
+def _text(value):
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def _number(value):
+    return "—" if value is None else f"{value:.9g}"
+
+
+def _leaf_changes(a, b, prefix=""):
+    if isinstance(a, dict) and isinstance(b, dict):
+        for key in sorted(set(a) | set(b)):
+            yield from _leaf_changes(a.get(key), b.get(key), f"{prefix}.{key}" if prefix else key)
+    elif a != b:
+        def short(value):
+            s = json.dumps(value, ensure_ascii=False)
+            return s if len(s) < 180 else s[:177] + "..."
+        yield prefix, short(a), short(b)
+
+
+def write_report(directory, report):
+    directory = Path(directory)
+    write_json(directory / "metrics.json", report)
+    manifest = report["manifest"]
+    lines = [
+        "# Natural Earth regression report", "",
+        f"Result: **{'PASS' if report['passed'] else 'FAIL'}**", "",
+        f"Reference: `{_text(manifest['reference'])}`  ",
+        f"Candidate commit: `{_text(manifest['candidate_commit'])}`  ",
+        f"Runner: `{_text(manifest['runner'])}`  ",
+        f"UTC start: `{manifest['started_utc']}`  ",
+        f"Elapsed: {report.get('seconds', 0):.1f} seconds", "",
+        "Full input/output checksums, effective configuration, source hashes and installed package versions "
+        "are in [manifest.json](manifest.json). All measurements are in [metrics.json](metrics.json).", "",
+        "## Acceptance policy", "",
+        "Shapefiles: attributes, IDs, CRS and geometry type must match; valid geometries must be spatially "
+        "equal. Invalid geometries must be structurally equal after ordering normalization, without repair. "
+        "Feature row order and equivalent vertex ordering are reported separately.", "",
+        f"NetCDF: dimensions, coordinates, variable dtypes, attributes and missing-value patterns must match. "
+        f"Float comparison uses atol={report['policy']['atol']}, rtol={report['policy']['rtol']}; "
+        "coordinates and integer variables remain exact. Tolerances never suppress zero/one transition reporting.", "",
+        "File hashes and NetCDF compression/chunking are reported independently. "
+        + ("Byte identity is required for every published artifact." if report['policy']['require_byte_identical']
+           else "Storage-only changes do not fail this semantic comparison; use --require-byte-identical for an exact-file gate."),
+        "",
+        "Coverage diagnostics describe existing defects; PASS means reproduction of the reference, "
+        "not certification of geographical correctness. The reference's historical environment and unsaved "
+        "pre-normalization arrays are unknown.", "",
+        "## Configuration", "", "```json", json.dumps(manifest["settings"], indent=2), "```", "",
+    ]
+    if report.get("generation_error"):
+        lines += ["## Generation error", "", "```text", report["generation_error"], "```", ""]
+    if manifest.get("stages"):
+        lines += ["## Generation stages", "", "| Stage | Result | Seconds |", "|---|---|---:|"]
+        for s in manifest["stages"]:
+            lines.append(f"| {_text(s['name'])} | {s['status']} | {s.get('seconds', 0):.1f} |")
+        lines += ["", "Executed notebooks and their outputs are retained in `execution/`.", ""]
+    lines += ["## Artifact comparisons", "", "| Artifact | Semantic result | Byte identical |", "|---|---|---|"]
+    for path, r in report["artifacts"].items():
+        lines.append(f"| `{_text(path)}` | {'PASS' if r['passed'] else 'FAIL'} | {r.get('byte_identical', '—')} |")
+    lines.append("")
+    for path, r in report["artifacts"].items():
+        lines += [f"### `{_text(path)}`", ""]
+        if r.get("error"):
+            lines += [f"Error: {_text(r['error'])}", ""]
+        for e in r.get("errors", []):
+            lines += [f"- {_text(e)}"]
+        if r.get("errors"):
+            lines.append("")
+        if "regions" in r:
+            lines += [f"Area method: {r['area_method']}", "",
+                      f"Feature row order equal: {r.get('row_order_equal', 'unknown')}. "
+                      f"Added IDs: `{r.get('added_ids', [])}`. Missing IDs: `{r.get('missing_ids', [])}`.", "",
+                      "| Region | Result | Reference km² | Candidate km² | Added km² | Removed km² | Sym. difference km² | Changes |",
+                      "|---|---|---:|---:|---:|---:|---:|---|"]
+            for label, m in r["regions"].items():
+                detail = list(m.get("attribute_changes", {}))
+                if m.get("spatial_equal") is False:
+                    detail.append("geometry")
+                if m["reference"].get("valid") is False:
+                    detail.append("invalid reference: structural comparison")
+                if not m.get("structural_equal") and m.get("spatial_equal"):
+                    detail.append("equivalent geometry; vertex structure differs")
+                lines.append(f"| {_text(label)} | {'PASS' if m['passed'] else 'FAIL'} | "
+                             f"{_number(m['reference'].get('area_km2'))} | {_number(m['candidate'].get('area_km2'))} | "
+                             f"{_number(m.get('added_km2'))} | {_number(m.get('removed_km2'))} | "
+                             f"{_number(m.get('symmetric_difference_km2'))} | {_text(', '.join(detail))} |")
+            lines.append("")
+        if "schema_changes" in r:
+            lines += [f"Schema/metadata changes: `{list(r['schema_changes'])}`. "
+                      f"Storage changes: `{list(r['storage_changes'])}`.", ""]
+            for kind in ["schema_changes", "storage_changes"]:
+                if r[kind]:
+                    lines += ["| Changed field | Reference | Candidate |", "|---|---|---|"]
+                    for key, pair in r[kind].items():
+                        for field, old, new in _leaf_changes(pair["reference"], pair["candidate"], key):
+                            lines.append(f"| {_text(field)} | {_text(old)} | {_text(new)} |")
+                    lines += ["", "Long values are abbreviated here; full values are in `metrics.json`.", ""]
+            lines += ["| Variable | Exact values | Changed | Above tolerance | Missing pattern changes | Max absolute difference |",
+                      "|---|---|---:|---:|---:|---:|"]
+            for name, m in r["variables"].items():
+                lines.append(f"| {_text(name)} | {m.get('exact_equal', False)} | {m.get('changed_values', '—')} | "
+                             f"{m.get('above_tolerance', '—')} | {m.get('missing_pattern_changes', '—')} | "
+                             f"{_number(m.get('max_abs_diff'))} |")
+            lines.append("")
+            mask = r["variables"].get("mask", {})
+            if "max_diff_coordinates" in mask:
+                lines += [f"Largest difference at `{mask['max_diff_coordinates']}`.", ""]
+            changed = {k: v for k, v in mask.get("regions", {}).items() if not v["exact_equal"]}
+            if changed:
+                lines += ["| Changed region | Changed values | Max absolute difference | Zero transitions | One transitions |",
+                          "|---|---:|---:|---:|---:|"]
+                for label, m in changed.items():
+                    lines.append(f"| {_text(label)} | {m['changed_values']} | {_number(m.get('max_abs_diff'))} | "
+                                 f"{m.get('zero_transitions', 0)} | {m.get('one_transitions', 0)} |")
+                lines.append("")
+            if r.get("figure"):
+                relative = Path(r["figure"]).relative_to(directory)
+                lines += [f"![Maximum mask difference]({relative.as_posix()})", ""]
+        if r.get("changes"):
+            lines += [f"Changes: {_text(r['changes'])}", ""]
+    lines += ["## Coverage diagnostics", "",
+              "Union/gap/overlap diagnostics use explicitly repaired copies when necessary. "
+              "The strict per-feature comparisons above never repair geometry.", "",
+              "| Product | Version | Uncovered world km² | Overlap footprint km² | Invalid IDs |",
+              "|---|---|---:|---:|---|"]
+    for name, pair in report.get("coverage", {}).items():
+        for version, m in pair.items():
+            lines.append(f"| {_text(name)} | {version} | {_number(m.get('uncovered_world_km2'))} | "
+                         f"{_number(m.get('overlap_footprint_km2'))} | {_text(m.get('invalid_ids', m.get('error', '—')))} |")
+    lines += ["", "## Auxiliary raw masks", "",
+              "Pre-normalization arrays from notebook runs are retained under `candidate/diagnostics/`. "
+              "They have no historical baseline unless the supplied reference directory contains matching diagnostics. "
+              "They are additional evidence, not replacements for the published NetCDF comparison.", ""]
+    for name, r in report.get("auxiliary_raw_masks", {}).items():
+        lines += [f"### `{_text(name)}`", ""]
+        if r.get("error"):
+            lines += [f"Error: {_text(r['error'])}", ""]
+        elif r.get("status") == "no_reference":
+            lines += ["No historical reference. Candidate diagnostics:", "", "```json",
+                      json.dumps(r.get("candidate_metrics", {}).get("sum_over_regions", {}).get("candidate", {}), indent=2),
+                      "```", ""]
+        else:
+            m = r.get("variables", {}).get("mask", {})
+            lines += [f"Comparison: {'PASS' if r['passed'] else 'FAIL'}. "
+                      f"Changed values: {m.get('changed_values', 'unknown')}; "
+                      f"maximum absolute difference: {_number(m.get('max_abs_diff'))}.", ""]
+    directory.joinpath("report.md").write_text("\n".join(lines) + "\n")
