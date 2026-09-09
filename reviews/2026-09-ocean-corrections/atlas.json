@@ -1,0 +1,551 @@
+[
+  {
+    "bounds": [
+      -6.3,
+      35.6,
+      -5.1,
+      36.4
+    ],
+    "figure": "figures/00.png",
+    "kind": "Gibraltar",
+    "labels": [
+      "North Atlantic Ocean",
+      "Mediterranean Region"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Alboran Sea",
+      "North Atlantic Ocean",
+      "Strait of Gibraltar"
+    ]
+  },
+  {
+    "bounds": [
+      -127.71424028207686,
+      51.26145793740512,
+      -127.11412512899994,
+      51.398504950000074
+    ],
+    "figure": "figures/01.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Queen Charlotte Sound",
+      "Smith Sound"
+    ]
+  },
+  {
+    "bounds": [
+      -128.3327257860352,
+      51.995033124607865,
+      -127.84748287699989,
+      52.51512278900003
+    ],
+    "figure": "figures/02.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Internal Canada (B.C.) Waters",
+      "Queen Charlotte Sound",
+      "Smith Sound"
+    ]
+  },
+  {
+    "bounds": [
+      -80.365357918541,
+      -0.2207703524151039,
+      -80.03697669199994,
+      0.21609453774338247
+    ],
+    "figure": "figures/03.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "North Pacific Ocean",
+      "South Pacific Ocean"
+    ]
+  },
+  {
+    "bounds": [
+      -68.73116164145947,
+      -52.32418680331652,
+      -68.63795322885056,
+      -52.306908268999905
+    ],
+    "figure": "figures/04.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "South Pacific Ocean",
+      "Southern Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Estrecho de Magellanes",
+      "South Atlantic Ocean"
+    ]
+  },
+  {
+    "bounds": [
+      -64.8183630732002,
+      60.2884766898991,
+      -64.45886317697205,
+      60.407474579670634
+    ],
+    "figure": "figures/05.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Davis Strait",
+      "Hudson Strait",
+      "Labrador Sea"
+    ]
+  },
+  {
+    "bounds": [
+      -64.47744706899994,
+      60.305241383892145,
+      -64.40686418319078,
+      60.380782711778494
+    ],
+    "figure": "figures/06.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Davis Strait",
+      "Labrador Sea"
+    ]
+  },
+  {
+    "bounds": [
+      -45.65019576646769,
+      -60.55486419099992,
+      -45.49932174739949,
+      -60.52878360956686
+    ],
+    "figure": "figures/07.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Southern Atlantic Ocean",
+      "Southern Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "SOUTHERN OCEAN",
+      "South Atlantic Ocean"
+    ]
+  },
+  {
+    "bounds": [
+      -51.35845751457723,
+      -0.2993128415780334,
+      -51.34623189935231,
+      -0.27436715961233704
+    ],
+    "figure": "figures/08.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Atlantic Ocean",
+      "Southern Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Amazon River"
+    ]
+  },
+  {
+    "bounds": [
+      -51.333204291279024,
+      -0.2477850562342201,
+      -51.309277663484046,
+      -0.19896411458785052
+    ],
+    "figure": "figures/09.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Atlantic Ocean",
+      "Southern Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Amazon River",
+      "Canal do Norte"
+    ]
+  },
+  {
+    "bounds": [
+      -45.35269070174951,
+      60.15421672610888,
+      -44.84447180899991,
+      60.47797272300005
+    ],
+    "figure": "figures/10.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Davis Strait",
+      "Labrador Sea"
+    ]
+  },
+  {
+    "bounds": [
+      -28.507923956999946,
+      68.42341512291986,
+      -28.397687623565222,
+      68.44757721600007
+    ],
+    "figure": "figures/11.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Denmark Strait",
+      "Greenland Sea"
+    ]
+  },
+  {
+    "bounds": [
+      -1.1250707669999542,
+      60.373928127000056,
+      -1.0555317944802447,
+      60.42926304227962
+    ],
+    "figure": "figures/12.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Arctic Ocean",
+      "North Atlantic Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "North Sea",
+      "Norwegian Sea"
+    ]
+  },
+  {
+    "bounds": [
+      105.25090754428687,
+      -6.767347914999959,
+      105.34584341756106,
+      -6.671399816203819
+    ],
+    "figure": "figures/13.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Indian Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "INDIAN OCEAN",
+      "Java Sea"
+    ]
+  },
+  {
+    "bounds": [
+      116.9223623474247,
+      -9.082730678401111,
+      116.98776787570391,
+      -9.060153903999947
+    ],
+    "figure": "figures/14.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Indian Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Bali Sea",
+      "INDIAN OCEAN"
+    ]
+  },
+  {
+    "bounds": [
+      120.64970271929504,
+      -10.224301364739416,
+      120.65493976209858,
+      -10.22234954661923
+    ],
+    "figure": "figures/15.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Indian Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "INDIAN OCEAN",
+      "Savu Sea"
+    ]
+  },
+  {
+    "bounds": [
+      120.96321114493182,
+      13.716729876179151,
+      121.05347741000003,
+      13.783636786000045
+    ],
+    "figure": "figures/16.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "South China Sea",
+      "Tayabas Bay"
+    ]
+  },
+  {
+    "bounds": [
+      121.08051318491783,
+      25.056546996959817,
+      121.15092506928929,
+      25.08450778194485
+    ],
+    "figure": "figures/17.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "East China Sea",
+      "Taiwan Strait"
+    ]
+  },
+  {
+    "bounds": [
+      123.35596764400009,
+      -10.59658329886272,
+      123.39907677357792,
+      -10.541623616540322
+    ],
+    "figure": "figures/18.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Indian Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Savu Sea",
+      "Timor Sea"
+    ]
+  },
+  {
+    "bounds": [
+      123.39271927332102,
+      8.629828192000048,
+      123.43637129000001,
+      8.676736624265965
+    ],
+    "figure": "figures/19.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Bohol Sea",
+      "Sulu Sea"
+    ]
+  },
+  {
+    "bounds": [
+      122.60925332351461,
+      10.754740514252042,
+      122.65139929634537,
+      10.78514685783854
+    ],
+    "figure": "figures/20.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Sulu Sea",
+      "Visayan Sea"
+    ]
+  },
+  {
+    "bounds": [
+      121.41229420418706,
+      12.410542418573483,
+      121.41430222778372,
+      12.422474023069718
+    ],
+    "figure": "figures/21.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Sibuyan Sea"
+    ]
+  },
+  {
+    "bounds": [
+      130.2992468341448,
+      -0.10678476399993997,
+      130.33628987627796,
+      -0.08400652549910564
+    ],
+    "figure": "figures/22.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Selat Dampier"
+    ]
+  },
+  {
+    "bounds": [
+      130.5397187548196,
+      -0.07268645599992851,
+      130.5452328205108,
+      -0.06815987916519445
+    ],
+    "figure": "figures/23.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Selat Dampier"
+    ]
+  },
+  {
+    "bounds": [
+      126.80384523312465,
+      4.026877144000987,
+      126.88591132516189,
+      4.23790866173767
+    ],
+    "figure": "figures/24.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Molucca Sea",
+      "Philippine Sea"
+    ]
+  },
+  {
+    "bounds": [
+      133.39665774800005,
+      -3.8033716436629907,
+      133.49616564024896,
+      -3.63211480392185
+    ],
+    "figure": "figures/25.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "Indian Ocean",
+      "South China and Easter Archipelagic Seas"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Arafura Sea",
+      "Ceram Sea"
+    ]
+  },
+  {
+    "bounds": [
+      131.30697379532063,
+      -0.3203762903290799,
+      131.33240297462766,
+      -0.297224113301836
+    ],
+    "figure": "figures/26.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "South China and Easter Archipelagic Seas",
+      "South Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "Selat Dampier",
+      "South Pacific Ocean"
+    ]
+  },
+  {
+    "bounds": [
+      131.1738793775465,
+      -0.14119310443312924,
+      131.25740384421545,
+      -0.10467676498170625
+    ],
+    "figure": "figures/27.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "South Pacific Ocean"
+    ]
+  },
+  {
+    "bounds": [
+      131.043793165,
+      -0.07266685902977142,
+      131.10066255562725,
+      -0.052617403738900684
+    ],
+    "figure": "figures/28.png",
+    "kind": "Ambiguous gap",
+    "labels": [
+      "North Pacific Ocean",
+      "South Pacific Ocean"
+    ],
+    "review_status": "unreviewed",
+    "source_names": [
+      "North Pacific Ocean",
+      "South Pacific Ocean"
+    ]
+  }
+]

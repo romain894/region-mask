@@ -1,0 +1,530 @@
+{
+  "Arctic Ocean": {
+    "added_km2": 463.35192512458224,
+    "candidate": {
+      "area_km2": 15683215.33025404,
+      "area_numerical_uncertainty_km2": 1.0055129676405935e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        50.72691478100006,
+        180.0,
+        89.99999999999996
+      ],
+      "coordinates": 118801,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 817,
+      "parts": 6,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 1.751564542589801e-11,
+    "net_area_change_km2": 463.3410120792687,
+    "net_transfer_km2": 463.3410120750672,
+    "passed": false,
+    "reference": {
+      "area_km2": 15682751.989241961,
+      "area_numerical_uncertainty_km2": 1.0387897819708292e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        50.72691478100006,
+        180.0,
+        90.00000000000006
+      ],
+      "coordinates": 119435,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 816,
+      "parts": 5,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": 2.9544624081099472e-05,
+    "removed_km2": 0.01091304951501538,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 463.36283817409725
+  },
+  "Baltic Sea": {
+    "added_km2": 3.120628518169952e-12,
+    "candidate": {
+      "area_km2": 420987.1065659657,
+      "area_numerical_uncertainty_km2": 1.138764240725976e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        9.434336785000085,
+        53.59837474200003,
+        30.246104363000086,
+        65.91209544500003
+      ],
+      "coordinates": 17828,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 536,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 1.6918850298006973e-15,
+    "net_area_change_km2": -0.0033103220630437136,
+    "net_transfer_km2": -0.0033103221025805995,
+    "passed": false,
+    "reference": {
+      "area_km2": 420987.10987628775,
+      "area_numerical_uncertainty_km2": 1.1626746869901317e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        9.434336785000085,
+        53.59837474200003,
+        30.246104363000086,
+        65.91209544500003
+      ],
+      "coordinates": 17860,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 536,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -7.863238530073978e-09,
+    "removed_km2": 0.003310322105701228,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 0.003310322108821856
+  },
+  "Caspian Sea": {
+    "added_km2": 1.3408969453839336e-13,
+    "candidate": {
+      "area_km2": 396194.4597435336,
+      "area_numerical_uncertainty_km2": 1.6122621566318962e-08,
+      "area_numerically_resolved": true,
+      "bounds": [
+        46.680430535000085,
+        36.58270905200004,
+        54.76742597700007,
+        47.12091705900008
+      ],
+      "coordinates": 3056,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 16,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 5.60234157438978e-17,
+    "net_area_change_km2": -0.0001153835910372436,
+    "net_transfer_km2": -0.00011538355720296963,
+    "passed": false,
+    "reference": {
+      "area_km2": 396194.45985891717,
+      "area_numerical_uncertainty_km2": 1.5905662222799376e-08,
+      "area_numerically_resolved": true,
+      "bounds": [
+        46.680430535000085,
+        36.58270905200004,
+        54.76742597700007,
+        47.12091705900008
+      ],
+      "coordinates": 3058,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 16,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.91229693313559e-10,
+    "removed_km2": 0.00011538355733705932,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 0.00011538355747114901
+  },
+  "Indian Ocean": {
+    "added_km2": 6.534092639945745,
+    "candidate": {
+      "area_km2": 71446666.09947385,
+      "area_numerical_uncertainty_km2": 1.3541912157651494e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        19.615836622809496,
+        -60.53346241642455,
+        146.9167,
+        30.519273179000038
+      ],
+      "coordinates": 50714,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 886,
+      "parts": 6,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 5.038712365298573e-13,
+    "net_area_change_km2": -16.57329721748829,
+    "net_transfer_km2": -16.573297291790297,
+    "passed": false,
+    "reference": {
+      "area_km2": 71446682.67277107,
+      "area_numerical_uncertainty_km2": 1.3599228478636455e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        19.615836622809496,
+        -60.53346241642455,
+        146.9167,
+        30.519273179000038
+      ],
+      "coordinates": 50635,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 886,
+      "parts": 6,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.3196734400384572e-07,
+    "removed_km2": 23.10738993173604,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 29.641482571681784
+  },
+  "Mediterranean Region": {
+    "added_km2": 1057.4912514114724,
+    "candidate": {
+      "area_km2": 2986379.6146591394,
+      "area_numerical_uncertainty_km2": 6.378067583893232e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -6.0369204959048055,
+        30.26471588700008,
+        41.77393639400009,
+        47.28782786700003
+      ],
+      "coordinates": 23471,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 252,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 1.8386690886566616e-11,
+    "net_area_change_km2": 1047.0955692138523,
+    "net_transfer_km2": 1047.0955692139146,
+    "passed": false,
+    "reference": {
+      "area_km2": 2985332.5190899256,
+      "area_numerical_uncertainty_km2": 6.39023442481008e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -6.134621111585217,
+        30.26471588700008,
+        41.77393639400009,
+        47.28782786700003
+      ],
+      "coordinates": 23619,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 252,
+      "parts": 5,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": 0.0003507467133118752,
+    "removed_km2": 10.395682197557816,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 1067.8869336090302
+  },
+  "North Atlantic Ocean": {
+    "added_km2": 11.940177136946428,
+    "candidate": {
+      "area_km2": 41660301.26615628,
+      "area_numerical_uncertainty_km2": 1.1735131031862408e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -97.89321855399993,
+        -0.8746070289999466,
+        11.437754754000082,
+        68.63056061400005
+      ],
+      "coordinates": 79877,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 1086,
+      "parts": 8,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 2.361310632598331e-11,
+    "net_area_change_km2": -1249.733589462936,
+    "net_transfer_km2": -1249.7335894382984,
+    "passed": false,
+    "reference": {
+      "area_km2": 41661550.99974574,
+      "area_numerical_uncertainty_km2": 1.1775811868675425e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -97.89321855399993,
+        -0.8746070289999466,
+        11.437754754000082,
+        68.63056061400005
+      ],
+      "coordinates": 80091,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 1087,
+      "parts": 7,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.9997289094459374e-05,
+    "removed_km2": 1261.6737665752448,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 1273.6139437121913
+  },
+  "North Pacific Ocean": {
+    "added_km2": 76.41787406463337,
+    "candidate": {
+      "area_km2": 76800892.43477798,
+      "area_numerical_uncertainty_km2": 1.0038485457338294e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -0.06731363861644081,
+        180.0,
+        66.41437409100007
+      ],
+      "coordinates": 82346,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 1325,
+      "parts": 5,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 1.4660018629943943e-11,
+    "net_area_change_km2": -202.96864995360374,
+    "net_transfer_km2": -202.96864997061655,
+    "passed": false,
+    "reference": {
+      "area_km2": 76801095.40342793,
+      "area_numerical_uncertainty_km2": 9.572950192685236e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -16.149111724999955,
+        180.0,
+        66.41437409100007
+      ],
+      "coordinates": 82558,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 1326,
+      "parts": 5,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.6427832687467694e-06,
+    "removed_km2": 279.3865240352499,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 355.8043980998833
+  },
+  "South China and Easter Archipelagic Seas": {
+    "added_km2": 24.64949493604875,
+    "candidate": {
+      "area_km2": 6828805.021889118,
+      "area_numerical_uncertainty_km2": 6.416861154151121e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        95.46358013995824,
+        -10.852970143000654,
+        134.00513756600003,
+        25.283026434000078
+      ],
+      "coordinates": 38159,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 773,
+      "parts": 15,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 1.0691618801160666e-12,
+    "net_area_change_km2": -18.569430325180292,
+    "net_transfer_km2": -18.56943032484993,
+    "passed": false,
+    "reference": {
+      "area_km2": 6828823.591319443,
+      "area_numerical_uncertainty_km2": 6.470579309921775e-07,
+      "area_numerically_resolved": true,
+      "bounds": [
+        95.46358013995824,
+        -10.852970143000654,
+        134.00513756600003,
+        25.283026434000078
+      ],
+      "coordinates": 38272,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 773,
+      "parts": 15,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.719272225568265e-06,
+    "removed_km2": 43.21892526089868,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 67.86842019694743
+  },
+  "South Pacific Ocean": {
+    "added_km2": 63.32563234714887,
+    "candidate": {
+      "area_km2": 85554057.41662258,
+      "area_numerical_uncertainty_km2": 4.038679889815828e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -60.53346241642455,
+        180.0,
+        3.651301988129177
+      ],
+      "coordinates": 46341,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 795,
+      "parts": 3,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 4.530345764205815e-12,
+    "net_area_change_km2": 21.635640114545822,
+    "net_transfer_km2": 21.63564010951307,
+    "passed": false,
+    "reference": {
+      "area_km2": 85554035.78098246,
+      "area_numerical_uncertainty_km2": 4.32544901777249e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -60.53346241642455,
+        180.0,
+        3.651301988129177
+      ],
+      "coordinates": 46373,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 795,
+      "parts": 3,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": 2.5288859744656416e-07,
+    "removed_km2": 41.6899922376358,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 105.01562458478466
+  },
+  "Southern Atlantic Ocean": {
+    "added_km2": 0.9753529992100173,
+    "candidate": {
+      "area_km2": 40573060.46464548,
+      "area_numerical_uncertainty_km2": 3.2540332419396474e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -69.61681067599994,
+        -60.54843515399995,
+        19.63248063207295,
+        0.041327216000070166
+      ],
+      "coordinates": 15276,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 100,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 5.275549289477588e-14,
+    "net_area_change_km2": -1.5763947740197182,
+    "net_transfer_km2": -1.5763947788825048,
+    "passed": false,
+    "reference": {
+      "area_km2": 40573062.04104026,
+      "area_numerical_uncertainty_km2": 3.266560224197476e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -69.61681067599994,
+        -60.54843515399995,
+        19.63248063207295,
+        0.041327216000070166
+      ],
+      "coordinates": 15301,
+      "empty": false,
+      "geometry_type": "Polygon",
+      "holes": 100,
+      "parts": 1,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -3.885323647559978e-08,
+    "removed_km2": 2.551747778092522,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 3.5271007773025396
+  },
+  "Southern Ocean": {
+    "added_km2": 1.8844701173193483e-11,
+    "candidate": {
+      "area_km2": 20873287.47577637,
+      "area_numerical_uncertainty_km2": 8.368946847928959e-06,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -85.22193775799991,
+        180.0,
+        -55.697159276257935
+      ],
+      "coordinates": 27213,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 178,
+      "parts": 3,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "change_numerical_uncertainty_km2": 6.746697954850607e-13,
+    "net_area_change_km2": -43.2346948646009,
+    "net_transfer_km2": -43.23469484875748,
+    "passed": false,
+    "reference": {
+      "area_km2": 20873330.710471235,
+      "area_numerical_uncertainty_km2": 1.012945496952488e-05,
+      "area_numerically_resolved": true,
+      "bounds": [
+        -179.99999999999991,
+        -85.22193775799991,
+        180.0,
+        -16.96278239299994
+      ],
+      "coordinates": 27377,
+      "empty": false,
+      "geometry_type": "MultiPolygon",
+      "holes": 178,
+      "parts": 3,
+      "valid": true,
+      "validity_reason": "Valid Geometry"
+    },
+    "relative_area_change": -2.071288739890081e-06,
+    "removed_km2": 43.23469484877632,
+    "spatial_equal": false,
+    "structural_equal": false,
+    "symmetric_difference_km2": 43.234694848795165
+  }
+}

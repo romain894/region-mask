@@ -19,7 +19,8 @@ def _(mo):
     mo.md("""
     # Prepare Natural Earth oceans and seas
 
-    Use the existing marine-region overlay and coastal-gap assignment. This refactor does not correct its known artifacts.
+    Run country preparation first. Retain the marine groups, repair the detailed water footprint,
+    remove country overlap, split ambiguous coastal gaps, and apply the documented Gibraltar separation.
 
     Settings come from `.env` in the launch directory (environment variables take precedence).
     **Generate and write** overwrites the configured outputs. For isolated validation,

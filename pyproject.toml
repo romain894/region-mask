@@ -37,6 +37,7 @@ dependencies = [
     "rasterio>=1.3",
     "chardet>=5",
     "pycountry>=24.6",
+    "pyproj>=3.4",
 ]
 
 [project.optional-dependencies]

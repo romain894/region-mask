@@ -60,6 +60,7 @@ Prepare Natural Earth shapes
        "/work/data/ne_10m/ne_10m_ocean/ne_10m_ocean.shp",
        "/work/data/codes_id.csv",
        "/work/data/oceans/oceans.shp",
+       countries_path="/work/data/countries/countries.shp",
    )
    combined = generate_merge(
        "/work/data/countries/countries.shp",
@@ -70,6 +71,10 @@ Prepare Natural Earth shapes
 Each function writes its explicit output path and returns a GeoDataFrame.
 ``generate_land_ocean`` is the alternative two-region product: it takes the
 prepared countries but the **original** Natural Earth ocean shapefile.
+Both ocean products repair this detailed water geometry and subtract country
+overlaps using the same method. The ``oceans`` stage requires prepared countries;
+direct API callers should supply ``countries_path`` for consistent land clipping.
+See :doc:`ocean_method` for boundary conventions and coverage limitations.
 
 Stage commands
 --------------

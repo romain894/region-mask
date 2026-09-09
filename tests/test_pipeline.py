@@ -42,6 +42,13 @@ class PipelineTests(unittest.TestCase):
                 run_stage("land_ocean", root=directory)
                 self.assertEqual(generate.call_args.args[1], Path(directory) / DEFAULTS["NE_GEO_OCEAN_PATH"])
 
+    def test_ocean_groups_use_prepared_countries_for_alignment(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch("region_mask.oceans.generate_oceans") as generate:
+                run_stage("oceans", root=directory)
+                self.assertEqual(generate.call_args.kwargs["countries_path"],
+                                 Path(directory) / DEFAULTS["COUNTRIES_FROM_NE_PATH"])
+
     def test_mask_settings_are_explicit_and_independent_of_environment(self):
         with tempfile.TemporaryDirectory() as directory:
             settings = {"NORMALIZE_MASK": "false", "MASK_RESOLUTION": "1",

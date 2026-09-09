@@ -145,12 +145,20 @@ baseline commit. Never automatically accept new output because a test failed.
 - Reports include areas, additions/removals, symmetric difference, bounds, parts,
   holes, vertex counts, and validity. Equal total areas alone never establish a pass.
 
-Area diagnostics use a WGS84 cylindrical equal-area projection with standard
-parallel 30°. Source segments are densified to at most 0.25° before projection.
-They are approximate physical areas of the represented polygons; their method
-is versioned with the comparator. They are not measurements in square degrees.
+Area diagnostics integrate the WGS84 surface Jacobian over the original
+straight longitude/latitude edges. This avoids the former densified-projection
+method's artificial area for nearly collinear slivers. Reports include separate
+added, removed, net-transfer and changed areas, with an empirical quadrature and
+roundoff uncertainty estimate (not a certified bound or geographical accuracy).
+No slivers are dropped and numerical area estimates never relax exact geometry
+acceptance. See [area and review methodology](../docs/ocean_review.rst).
 Geometries must already use the dataset's split longitude representation in
 EPSG:4326; the comparator does not reinterpret seam-crossing input geometry.
+
+`make ocean-review` generates sequential controlled variants and a Markdown atlas
+from pinned Git inputs. It writes only a new review directory, retaining source
+snapshots, checksums, JSON metrics and figures. Use it to assess corrections;
+neither the workflow nor its reports approve a new baseline automatically.
 
 Coverage diagnostics run on the explicitly configured `coverage_shapefiles`
 (the two combined world products in the default configuration). They describe

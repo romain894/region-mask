@@ -8,7 +8,7 @@ NOTEBOOK ?=
 
 .DEFAULT_GOAL := help
 
-.PHONY: help test generate-ne check-notebooks notebook docs build package-check regression regression-strict compare
+.PHONY: help test generate-ne check-notebooks notebook docs build package-check regression regression-strict compare ocean-review archive-review
 
 help:
 	@printf '%s\n' \
@@ -21,6 +21,8 @@ help:
 	  '  make build             Build a source archive and wheel.' \
 	  '  make package-check     Build and test the installed wheel outside the checkout.' \
 	  '  make regression        Regenerate Natural Earth artifacts and write a Markdown regression report.' \
+	  '  make ocean-review      Generate controlled ocean comparisons and a review atlas (no production writes).' \
+	  '  make archive-review RUN=<run-directory> NAME=<review-name>  Archive selected review evidence in reviews/.' \
 	  '  make regression-strict As regression, additionally require byte-identical published artifacts.' \
 	  '  make compare CANDIDATE=<artifact-directory> [REFERENCE=<artifact-directory>]' \
 	  '                         Compare existing artifacts and write a Markdown report.' \
@@ -36,6 +38,13 @@ generate-ne:
 
 regression:
 	$(PYTHON) -m regression run
+
+ocean-review:
+	$(PYTHON) -m regression.ocean_review $(if $(OUTPUT),--output "$(OUTPUT)")
+
+archive-review:
+	@test -n "$(RUN)" -a -n "$(NAME)" || { echo 'RUN and NAME are required'; exit 2; }
+	$(PYTHON) -m regression.archive_review --run "$(RUN)" --name "$(NAME)"
 
 check-notebooks:
 	$(PYTHON) -m marimo check --strict $(NOTEBOOKS)

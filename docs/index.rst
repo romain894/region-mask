@@ -7,11 +7,10 @@ Use the installed Python API, command-line stages, or the accompanying marimo ex
 
 .. warning::
 
-   The current calculation is preserved from the original research notebooks.
-   Fractional intersections use planar longitude/latitude areas, not geodesic
-   areas. Existing ocean-boundary artifacts and normalization limitations are
-   not corrected by packaging the code. Regression agreement establishes
-   reproducibility, not geographical correctness.
+   Fractional intersections still use planar longitude/latitude areas, not
+   geodesic areas; normalization limitations remain. Ocean labelling now uses
+   the corrected method described below. Regression agreement establishes
+   reproducibility, not geographical correctness or authoritative boundaries.
 
 .. toctree::
    :maxdepth: 2
@@ -19,6 +18,8 @@ Use the installed Python API, command-line stages, or the accompanying marimo ex
    installation
    usage
    notebooks
+   ocean_method
+   ocean_review
    api
    development
 

@@ -12,6 +12,17 @@ Natural Earth preparation
 
 .. autofunction:: region_mask.land_ocean.generate_land_ocean
 
+Ocean partition helpers
+-----------------------
+
+See :doc:`ocean_method` before changing boundary conventions or sampling.
+
+.. autofunction:: region_mask.ocean_partition.ocean_domain
+
+.. autofunction:: region_mask.ocean_partition.partition_ocean
+
+.. autofunction:: region_mask.ocean_partition.validate_partition
+
 Fractional masks
 ----------------
 

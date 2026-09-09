@@ -273,12 +273,26 @@ shifted regions, and export paths. Put calls starting Dask workers under
 `if __name__ == "__main__":` in ordinary Python scripts.
 
 The original Jupyter notebooks are frozen in [legacy_notebooks/](legacy_notebooks/).
-Other datasets' preparation notebooks remain unchanged. This migration changes
-organization, configuration and display only: ocean gap assignment, country
-adjustments, planar fractional areas, normalization and known limitations remain
-unchanged. Scientific corrections should be separate, regression-reviewed changes.
+Other datasets' preparation notebooks remain unchanged. The initial migration
+preserved the calculations. Natural Earth ocean labelling now uses a separate
+[scientific correction](docs/ocean_method.rst): conserved detailed water geometry,
+split ambiguous gaps, and an explicit Gibraltar boundary. Region groups and IDs,
+country preparation, planar fractional areas and normalization remain unchanged.
+Run country preparation before the ocean stage. Corrections intentionally differ
+from the pinned regression baseline; review the report before approving a new one.
 
 ### Documentation and distribution builds
+
+For controlled ocean-correction experiments and a Markdown map atlas, run
+`make ocean-review` (optionally `OUTPUT=regression-runs/my-review`). This reads
+the pinned Git inputs and writes only a new review directory. See
+[review methodology](docs/ocean_review.rst) for attribution and numerical-area
+uncertainty. It does not approve boundaries or update the baseline.
+
+Selected reports and maps are retained in the [scientific review archive](reviews/README.md)
+for browsing directly on GitHub. Archive a completed ocean review with
+`make archive-review RUN=regression-runs/my-review NAME=my-review-name`.
+Existing archives cannot be overwritten; large intermediate datasets are excluded.
 
 With the `dev` extra installed:
 
