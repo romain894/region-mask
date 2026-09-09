@@ -2,15 +2,23 @@
 #   make test PYTHON=python3
 
 PYTHON ?= .venv/bin/python
+NOTEBOOKS := $(wildcard notebooks/*.py)
+NOTEBOOK ?=
 
 .DEFAULT_GOAL := help
 
-.PHONY: help test regression regression-strict compare
+.PHONY: help test generate-ne check-notebooks notebook docs build package-check regression regression-strict compare
 
 help:
 	@printf '%s\n' \
 	  'Available targets:' \
 	  '  make test              Run unit and analytic mask-contract tests.' \
+	  '  make generate-ne       Regenerate all Natural Earth shapefiles, both masks and ID tables (overwrites outputs).' \
+	  '  make check-notebooks   Validate marimo notebook structure.' \
+	  '  make notebook NOTEBOOK=<filename.py>  Open the specified marimo notebook (required).' \
+	  '  make docs              Build Sphinx HTML documentation (warnings fail).' \
+	  '  make build             Build a source archive and wheel.' \
+	  '  make package-check     Build and test the installed wheel outside the checkout.' \
 	  '  make regression        Regenerate Natural Earth artifacts and write a Markdown regression report.' \
 	  '  make regression-strict As regression, additionally require byte-identical published artifacts.' \
 	  '  make compare CANDIDATE=<artifact-directory> [REFERENCE=<artifact-directory>]' \
@@ -22,8 +30,35 @@ help:
 test:
 	$(PYTHON) -m unittest discover -s tests -v
 
+generate-ne:
+	$(PYTHON) -m region_mask all-ne
+
 regression:
 	$(PYTHON) -m regression run
+
+check-notebooks:
+	$(PYTHON) -m marimo check --strict $(NOTEBOOKS)
+
+notebook:
+	@if [ -z "$(NOTEBOOK)" ]; then \
+	  echo 'NOTEBOOK is required. Example: make notebook NOTEBOOK=generate_mask.py'; \
+	  echo 'Available notebooks: $(notdir $(NOTEBOOKS))'; exit 2; \
+	fi
+	@case " $(notdir $(NOTEBOOKS)) " in \
+	  *" $(NOTEBOOK) "*) ;; \
+	  *) echo 'Unknown notebook: $(NOTEBOOK)'; \
+	     echo 'Available notebooks: $(notdir $(NOTEBOOKS))'; exit 2 ;; \
+	esac
+	$(PYTHON) -m marimo edit "notebooks/$(NOTEBOOK)"
+
+docs:
+	$(PYTHON) -m sphinx -b html -W --keep-going docs docs/_build/html
+
+build:
+	$(PYTHON) -m build
+
+package-check: build
+	$(PYTHON) scripts/check_distribution.py
 
 regression-strict:
 	$(PYTHON) -m regression run --require-byte-identical

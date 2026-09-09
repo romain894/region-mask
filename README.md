@@ -42,7 +42,7 @@ The repository contains the following codes and datasets which are licensed as f
 
 #### Code (Python):
 
-Notebooks in the repository are licensed under: **GPLv3** - GNU General Public License, version 3
+Python modules and notebooks in the repository are licensed under: **GPLv3** - GNU General Public License, version 3
 
 The full license text is provided in the `LICENSE-code.txt` file.
 
@@ -68,7 +68,7 @@ The workflow consists of two main stages:
 
 1.1. Admin 0 - Countries
 
-Notebook: `generate_shp_countries_ne_10m.ipynb`
+Marimo notebook: `notebooks/generate_shp_countries_ne_10m.py`; implementation: `region_mask/countries.py`.
 
 - Split countries with extra-territories (e.g., overseas or geographically detached regions)
   - List of changes from original [Natural Earth 10m - Admin 0](/data/ne_10m/ne_10m_admin_0_countries)
@@ -100,7 +100,7 @@ Output: `data/countries_from_ne_10m`
 
 1.2. Oceans
 
-Notebook: `generate_shp_oceans_ne_10m.ipynb`
+Marimo notebook: `notebooks/generate_shp_oceans_ne_10m.py`; implementation: `region_mask/oceans.py`.
 
 - Merge marine regions into oceans
 - Standardize metadata and identifiers
@@ -110,7 +110,7 @@ Output: `data/ocean_from_ne_10m`
 
 1.3. Complete shapefile (no empty spaces)
 
-Notebook: `merge_shp_ne_10m.ipynb`
+Marimo notebook: `notebooks/merge_shp_ne_10m.py`; implementation: `region_mask/merge.py`.
 
 - Merge countries with oceans
 - Ensure consistent CRS (EPSG:4326)
@@ -121,7 +121,7 @@ Output: `data/ne_10m_oceans_countries`
 1.4. Only land and ocean
 
 Alternatively, if the target is only the land and ocean division use
-Notebook: `generate_shp_land_ocean_ne_10m.ipynb` 
+Marimo notebook: `notebooks/generate_shp_land_ocean_ne_10m.py`; implementation: `region_mask/land_ocean.py`.
 
 - Flatten countries into a single land entity
 - Merge land .shp with ocean .shp
@@ -131,7 +131,7 @@ Output: `data/ne_10m_land_ocean`
 
 ### 2. Fractional Mask Generation
 
-Notebook: `generate_mask.ipynb`
+Marimo notebook: `notebooks/generate_mask.py`; implementation: `region_mask/mask.py`.
 
   - Align the geometries from the shape file on the desired mask bounds (split and shift along a meridian)
   - Compute the fractional coverage of each geometry for each cell of the mask:
@@ -175,6 +175,122 @@ update the paths in the main `.env` file to generate the mask.
 
 ## Configuration
 
+### Python modules and marimo notebooks
+
+Use Python 3.12 or later. The distribution is named `region-mask`; import it as
+`region_mask` (distinct from the separate `regionmask` project). From a checkout:
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install .                 # Python API and command line
+.venv/bin/python -m pip install '.[notebooks]'     # Also install marimo
+.venv/bin/python -m pip install -e '.[dev]'        # Editable development + all tooling
+```
+
+`pyproject.toml` defines runtime dependencies and the `notebooks`, `docs`, `legacy`,
+and `dev` extras. A built wheel can be installed without a checkout. Datasets and
+the Git-based regression suite are intentionally not bundled. These instructions
+do not assume that this project is published on PyPI.
+
+**Working in a cloned repository:** the notebooks already exist, so no copying
+is needed. From the repository root, explicitly choose the notebook to open:
+
+```bash
+make notebook NOTEBOOK=generate_shp_oceans_ne_10m.py
+make notebook NOTEBOOK=generate_mask.py
+```
+
+`make notebook` without `NOTEBOOK=...` refuses to start and lists the available
+filenames. An unknown filename is rejected as well.
+
+**Installed package without a clone:** download the desired `.py` file from
+the [notebooks directory](https://github.com/romain894/region-mask/tree/main/notebooks)
+at the tag or commit matching your package version. The project's source
+distribution (`.tar.gz`) also contains `notebooks/`, without the datasets.
+Save the notebook in your working directory, then open it directly:
+
+```bash
+marimo edit generate_mask.py
+```
+
+Install the `notebooks` extra to obtain marimo. The package does not copy or
+manage notebook files. Run marimo from the directory containing your `.env`
+and input data; relative paths resolve against that launch directory.
+
+The five `.py` notebooks in `notebooks/` are small interfaces to `region_mask/`.
+Opening them does not generate data. Review the displayed settings, then click
+**Generate and write** to overwrite the configured outputs. Run country and
+ocean preparation before the combined product; run country preparation before
+the land/ocean product; generate a mask after preparing its input shapefile.
+Inspection plots never modify or automatically export data.
+
+The same stages work without a notebook:
+
+To regenerate all four Natural Earth shapefiles, both masks, and their ID CSV
+tables in dependency order, run:
+
+```bash
+make generate-ne
+```
+
+This overwrites the configured production outputs (by default under `data/`).
+It uses `.env` and environment overrides for paths, grid settings, normalization,
+and workers. Both masks use their corresponding configured combined shapefile
+paths, regardless of `MASK_SHAPE_FILE_PATH`. Generation stops on the first error.
+Use `make regression` for an isolated generation and comparison report.
+
+For a release, regenerate the production artifacts and then compare those exact
+files against the pinned reference:
+
+```bash
+make generate-ne && make compare CANDIDATE=.
+```
+
+Review the generated `regression-runs/<timestamp>/report.md` before publishing
+the artifacts. These commands do not publish a release or update the baseline.
+
+Individual stages are also available:
+
+```bash
+.venv/bin/python -m region_mask countries
+.venv/bin/python -m region_mask oceans
+.venv/bin/python -m region_mask countries_oceans
+.venv/bin/python -m region_mask land_ocean
+.venv/bin/python -m region_mask mask
+```
+
+The installed `region-mask` command is equivalent to `python -m region_mask`.
+
+These commands use defaults, overridden by `.env`, then environment variables.
+`--root PATH` resolves relative paths there; `--config settings.json` supplies
+explicit settings without reading `.env` or environment overrides. Unlike regression,
+these generation commands **write the configured production outputs**.
+
+Python callers can import `generate_countries`, `generate_oceans`, `generate_merge`,
+`generate_land_ocean`, and `generate_mask` from their respective modules and pass
+explicit paths. `generate_mask` returns a `MaskResult` with final/raw DataArrays,
+shifted regions, and export paths. Put calls starting Dask workers under
+`if __name__ == "__main__":` in ordinary Python scripts.
+
+The original Jupyter notebooks are frozen in [legacy_notebooks/](legacy_notebooks/).
+Other datasets' preparation notebooks remain unchanged. This migration changes
+organization, configuration and display only: ocean gap assignment, country
+adjustments, planar fractional areas, normalization and known limitations remain
+unchanged. Scientific corrections should be separate, regression-reviewed changes.
+
+### Documentation and distribution builds
+
+With the `dev` extra installed:
+
+```bash
+make docs              # Sphinx HTML: docs/_build/html/index.html
+make build             # Source archive and wheel: dist/
+make package-check     # Build and verify wheel outside the checkout
+```
+
+See [the documentation sources](docs/index.rst) for installation, API examples,
+marimo usage and development guidance. Builds do not publish anything.
+
 ### Regression testing
 
 Before changing the processing code, reproduce the Git-tracked Natural Earth
@@ -182,15 +298,16 @@ outputs and generate a Markdown comparison report:
 
 ```bash
 make test
+make check-notebooks
 make regression
 ```
 
 See [the regression testing guide](regression/README.md) for dependencies,
-artifact comparisons, baseline policy, and the adapter interface for future
-Python modules and marimo notebooks. Runs write to isolated, ignored
+artifact comparisons, baseline policy, and the replaceable producer interface.
+The default runner executes the Python modules directly. Runs write to isolated, ignored
 `regression-runs/` directories and do not overwrite production datasets.
 
-GitHub Actions runs `make test` and the complete `make regression` workflow on
+GitHub Actions checks tests, notebooks, Sphinx docs and the installed wheel, then runs the complete `make regression` workflow on
 each push and pull request. The workflow uploads the Markdown report, metrics,
 manifest and execution logs for 30 days, including when a regression fails.
 
@@ -239,7 +356,13 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Launch Jupyter Lab:
+For the current Natural Earth workflow, launch marimo:
+
+```bash
+make notebook NOTEBOOK=generate_shp_oceans_ne_10m.py
+```
+
+Jupyter Lab remains available for the other datasets and legacy notebooks:
 
 ```bash
 jupyter lab

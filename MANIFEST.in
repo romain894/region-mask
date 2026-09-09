@@ -1,0 +1,6 @@
+include pyproject.toml README.md LICENSE-code.txt
+recursive-include docs *.rst *.py
+recursive-include notebooks *.py
+prune docs/_build
+# Repository tests depend on Git history and the separately retained regression tools.
+prune tests

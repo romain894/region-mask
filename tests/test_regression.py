@@ -220,6 +220,29 @@ class FileTests(unittest.TestCase):
         self.assertIn('**FAIL**', (self.root / 'report.md').read_text())
         self.assertFalse(json.loads((self.root / 'metrics.json').read_text())['passed'])
 
+    def test_report_distinguishes_worktree_from_head_and_existing_artifacts(self):
+        manifest = {'reference': 'baseline', 'candidate_commit': 'head',
+                    'runner': 'regression.runners:module_runner',
+                    'started_utc': '2026-01-01T00:00:00Z', 'settings': {}}
+        report = {'passed': True, 'manifest': manifest,
+                  'policy': {'atol': 0, 'rtol': 0, 'require_byte_identical': False},
+                  'artifacts': {}}
+        for status, label in [(' M region_mask/mask.py\n', 'uncommitted changes present'),
+                              ('', 'clean'), (None, 'unknown (not recorded)')]:
+            with self.subTest(status=status):
+                manifest['candidate_worktree_status'] = status
+                write_report(self.root, report)
+                markdown = (self.root / 'report.md').read_text()
+                self.assertIn('Repository HEAD (context only): `head`', markdown)
+                self.assertIn(f'**{label}**', markdown)
+                self.assertIn('generated from working-tree source snapshots', markdown)
+                self.assertNotIn('Candidate commit:', markdown)
+        manifest['runner'] = 'compare existing artifacts'
+        write_report(self.root, report)
+        markdown = (self.root / 'report.md').read_text()
+        self.assertIn('producing code revision is not inferred', markdown)
+        self.assertNotIn('generated from working-tree source snapshots', markdown)
+
     def test_missing_raw_candidate_is_not_silently_skipped(self):
         reference, candidate = self.root / 'reference', self.root / 'candidate'
         (reference / 'diagnostics').mkdir(parents=True)

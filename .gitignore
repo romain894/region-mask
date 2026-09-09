@@ -1,11 +1,16 @@
 .idea
 **/__pycache__/
+**/__marimo__/
 **/.ipynb_checkpoints/
 **/.*\.ipynb\.~*
 *.xml
 
 # Python virtual environment
 .venv
+*.egg-info/
+build/
+dist/
+docs/_build/
 
 # config file:
 .env

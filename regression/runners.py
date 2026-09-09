@@ -37,6 +37,57 @@ NOTEBOOKS = (
 )
 
 
+def module_runner(context):
+    """Execute snapshotted Python modules in fresh processes; never read .env."""
+    from region_mask.pipeline import DEFAULTS
+
+    source_dir = context.report_dir / "sources"
+    execution_dir = context.report_dir / "execution"
+    execution_dir.mkdir(parents=True, exist_ok=True)
+    for original in sorted((context.repo / "region_mask").glob("*.py")):
+        relative = original.relative_to(context.repo)
+        snapshot = source_dir / relative
+        snapshot.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(original, snapshot)
+        context.sources[str(relative)] = sha256(snapshot)
+
+    settings = DEFAULTS | context.settings | dict(zip(
+        ("COUNTRIES_FROM_NE_PATH", "OCEANS_FROM_NE_PATH", "NE_COUNTRIES_OCEANS_PATH", "NE_LAND_OCEAN_PATH"),
+        context.config["shapefiles"],
+    ))
+    stages = [(name, name, {}) for name in
+              ("countries", "oceans", "countries_oceans", "land_ocean")]
+    stages += [("mask", label, {"MASK_SHAPE_FILE_PATH": path}) for path, label in
+               zip(context.config["shapefiles"][2:], ("mask_countries_oceans", "mask_land_ocean"))]
+    for command, label, extra in stages:
+        config_path = execution_dir / f"{label}.settings.json"
+        write_json(config_path, settings | extra)
+        stage = {"name": label, "module": "region_mask", "status": "running"}
+        context.stages.append(stage)
+        write_json(context.report_dir / "stages.json", context.stages)
+        started = time.monotonic()
+        print(f"Generating {label} ...", flush=True)
+        try:
+            with (execution_dir / f"{label}.log").open("w") as stream:
+                subprocess.run(
+                    [sys.executable, "-m", "region_mask", command,
+                     "--root", str(context.workspace.resolve()),
+                     "--config", str(config_path.resolve()),
+                     "--diagnostics-dir", str((context.workspace / "diagnostics").resolve())],
+                    cwd=source_dir, check=True, timeout=context.timeout,
+                    env={**os.environ, "PYTHONPATH": str(source_dir.resolve()), "MPLBACKEND": "Agg"},
+                    stdout=stream, stderr=subprocess.STDOUT,
+                )
+            stage["status"] = "passed"
+        except Exception as exc:
+            stage.update(status="failed", error=str(exc))
+            raise
+        finally:
+            stage["seconds"] = round(time.monotonic() - started, 3)
+            write_json(context.report_dir / "stages.json", context.stages)
+        print(f"Generated {label} ({stage['seconds']:.1f}s)", flush=True)
+
+
 def notebook_runner(context):
     """Execute original computation cells in fresh kernels using the current Python.
 
@@ -68,7 +119,7 @@ def notebook_runner(context):
     sources = context.report_dir / "sources"
     sources.mkdir(parents=True, exist_ok=True)
     for name in NOTEBOOKS:
-        shutil.copyfile(context.repo / name, sources / name)
+        shutil.copyfile(context.repo / "legacy_notebooks" / name, sources / name)
         context.sources[name] = sha256(sources / name)
 
     def execute(name, label, extra=None, mask=False):

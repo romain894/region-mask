@@ -1,16 +1,2 @@
-jupyterlab
-shapely
-numpy
-matplotlib
-numba
-xarray
-netcdf4
-h5netcdf
-pandas
-dask[distributed]
-bokeh>=3.1.0
-python-dotenv
-geopandas
-rasterio
-chardet
-pycountry
+# Compatibility entry point; dependency declarations live in pyproject.toml.
+.[notebooks,legacy]
