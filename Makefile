@@ -3,6 +3,7 @@
 
 PYTHON ?= .venv/bin/python
 NOTEBOOKS := $(wildcard notebooks/*.py)
+NOTEBOOK_NAMES := $(basename $(notdir $(NOTEBOOKS)))
 NOTEBOOK ?=
 
 .DEFAULT_GOAL := help
@@ -15,7 +16,7 @@ help:
 	  '  make test              Run unit and analytic mask-contract tests.' \
 	  '  make generate-ne       Regenerate all Natural Earth shapefiles, both masks and ID tables (overwrites outputs).' \
 	  '  make check-notebooks   Validate marimo notebook structure.' \
-	  '  make notebook NOTEBOOK=<filename.py>  Open the specified marimo notebook (required).' \
+	  '  make notebook NOTEBOOK=<name>  Open a notebook, e.g. NOTEBOOK=oceans (required).' \
 	  '  make docs              Build Sphinx HTML documentation (warnings fail).' \
 	  '  make build             Build a source archive and wheel.' \
 	  '  make package-check     Build and test the installed wheel outside the checkout.' \
@@ -41,15 +42,15 @@ check-notebooks:
 
 notebook:
 	@if [ -z "$(NOTEBOOK)" ]; then \
-	  echo 'NOTEBOOK is required. Example: make notebook NOTEBOOK=generate_mask.py'; \
-	  echo 'Available notebooks: $(notdir $(NOTEBOOKS))'; exit 2; \
+	  echo 'NOTEBOOK is required. Example: make notebook NOTEBOOK=mask'; \
+	  echo 'Available notebooks: $(NOTEBOOK_NAMES)'; exit 2; \
 	fi
-	@case " $(notdir $(NOTEBOOKS)) " in \
+	@case " $(NOTEBOOK_NAMES) " in \
 	  *" $(NOTEBOOK) "*) ;; \
 	  *) echo 'Unknown notebook: $(NOTEBOOK)'; \
-	     echo 'Available notebooks: $(notdir $(NOTEBOOKS))'; exit 2 ;; \
+	     echo 'Available notebooks: $(NOTEBOOK_NAMES)'; exit 2 ;; \
 	esac
-	$(PYTHON) -m marimo edit "notebooks/$(NOTEBOOK)"
+	$(PYTHON) -m marimo edit "notebooks/$(NOTEBOOK).py"
 
 docs:
 	$(PYTHON) -m sphinx -b html -W --keep-going docs docs/_build/html

@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 from region_mask.pipeline import DEFAULTS, STAGES, environment_settings, run_stage
-from regression.runners import NOTEBOOKS, RunContext, module_runner
+from regression.runners import RunContext, module_runner
 
 
 REPO = Path(__file__).resolve().parents[1]
@@ -81,7 +81,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_notebook_imports_do_not_generate_or_start_workers(self):
         with patch("region_mask.pipeline.run_stage") as generate, patch("region_mask.mask.LocalCluster") as cluster:
-            for name in NOTEBOOKS:
+            for name in STAGES:
                 notebook = load_notebook(name)
                 self.assertTrue(hasattr(notebook, "app"))
             generate.assert_not_called()
@@ -89,7 +89,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_notebook_initial_execution_never_generates(self):
         with patch("region_mask.pipeline.run_stage") as generate:
-            for name in NOTEBOOKS:
+            for name in STAGES:
                 with self.subTest(notebook=name):
                     notebook = load_notebook(name)
                     _, definitions = notebook.app.run()
@@ -109,7 +109,8 @@ class PipelineTests(unittest.TestCase):
                              dims=("region", "lat", "lon"),
                              coords={"region": ["fixture"], "lat": [0.5, 1.5], "lon": [0.5, 1.5]})
         mask_result = MaskResult(array, array, regions, Path("fixture.nc"), Path("fixture.csv"))
-        for name, stage in zip(NOTEBOOKS, STAGES):
+        for stage in STAGES:
+            name = stage
             with self.subTest(notebook=name):
                 result = mask_result if stage == "mask" else regions
                 notebook = load_notebook(name)

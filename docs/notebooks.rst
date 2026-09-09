@@ -12,11 +12,11 @@ No copying is needed. From the repository root, explicitly select the file:
 
 .. code-block:: bash
 
-   make notebook NOTEBOOK=generate_shp_oceans_ne_10m.py
-   make notebook NOTEBOOK=generate_mask.py
+   make notebook NOTEBOOK=oceans
+   make notebook NOTEBOOK=mask
 
 Without ``NOTEBOOK=...``, ``make notebook`` refuses to start and lists available
-filenames. Unknown filenames are rejected too.
+names. Unknown names are rejected too.
 
 Installed package without a clone
 ---------------------------------
@@ -33,7 +33,7 @@ installed and the environment activated, open it directly:
 
 .. code-block:: bash
 
-   marimo edit generate_mask.py
+   marimo edit mask.py
 
 Use the same command to reopen it. There is no package-specific command for
 copying, opening or updating notebooks.

@@ -68,7 +68,7 @@ The workflow consists of two main stages:
 
 1.1. Admin 0 - Countries
 
-Marimo notebook: `notebooks/generate_shp_countries_ne_10m.py`; implementation: `region_mask/countries.py`.
+Marimo notebook: `notebooks/countries.py`; implementation: `region_mask/countries.py`.
 
 - Split countries with extra-territories (e.g., overseas or geographically detached regions)
   - List of changes from original [Natural Earth 10m - Admin 0](/data/ne_10m/ne_10m_admin_0_countries)
@@ -100,7 +100,7 @@ Output: `data/countries_from_ne_10m`
 
 1.2. Oceans
 
-Marimo notebook: `notebooks/generate_shp_oceans_ne_10m.py`; implementation: `region_mask/oceans.py`.
+Marimo notebook: `notebooks/oceans.py`; implementation: `region_mask/oceans.py`.
 
 - Merge marine regions into oceans
 - Standardize metadata and identifiers
@@ -110,7 +110,7 @@ Output: `data/ocean_from_ne_10m`
 
 1.3. Complete shapefile (no empty spaces)
 
-Marimo notebook: `notebooks/merge_shp_ne_10m.py`; implementation: `region_mask/merge.py`.
+Marimo notebook: `notebooks/countries_oceans.py`; implementation: `region_mask/merge.py`.
 
 - Merge countries with oceans
 - Ensure consistent CRS (EPSG:4326)
@@ -121,7 +121,7 @@ Output: `data/ne_10m_oceans_countries`
 1.4. Only land and ocean
 
 Alternatively, if the target is only the land and ocean division use
-Marimo notebook: `notebooks/generate_shp_land_ocean_ne_10m.py`; implementation: `region_mask/land_ocean.py`.
+Marimo notebook: `notebooks/land_ocean.py`; implementation: `region_mask/land_ocean.py`.
 
 - Flatten countries into a single land entity
 - Merge land .shp with ocean .shp
@@ -131,7 +131,7 @@ Output: `data/ne_10m_land_ocean`
 
 ### 2. Fractional Mask Generation
 
-Marimo notebook: `notebooks/generate_mask.py`; implementation: `region_mask/mask.py`.
+Marimo notebook: `notebooks/mask.py`; implementation: `region_mask/mask.py`.
 
   - Align the geometries from the shape file on the desired mask bounds (split and shift along a meridian)
   - Compute the fractional coverage of each geometry for each cell of the mask:
@@ -196,12 +196,12 @@ do not assume that this project is published on PyPI.
 is needed. From the repository root, explicitly choose the notebook to open:
 
 ```bash
-make notebook NOTEBOOK=generate_shp_oceans_ne_10m.py
-make notebook NOTEBOOK=generate_mask.py
+make notebook NOTEBOOK=oceans
+make notebook NOTEBOOK=mask
 ```
 
 `make notebook` without `NOTEBOOK=...` refuses to start and lists the available
-filenames. An unknown filename is rejected as well.
+names. An unknown name is rejected as well.
 
 **Installed package without a clone:** download the desired `.py` file from
 the [notebooks directory](https://github.com/romain894/region-mask/tree/main/notebooks)
@@ -210,7 +210,7 @@ distribution (`.tar.gz`) also contains `notebooks/`, without the datasets.
 Save the notebook in your working directory, then open it directly:
 
 ```bash
-marimo edit generate_mask.py
+marimo edit mask.py
 ```
 
 Install the `notebooks` extra to obtain marimo. The package does not copy or
@@ -359,7 +359,7 @@ pip install -r requirements.txt
 For the current Natural Earth workflow, launch marimo:
 
 ```bash
-make notebook NOTEBOOK=generate_shp_oceans_ne_10m.py
+make notebook NOTEBOOK=oceans
 ```
 
 Jupyter Lab remains available for the other datasets and legacy notebooks:
